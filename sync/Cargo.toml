@@ -9,6 +9,5 @@ name = "fsn-icons-sync"
 path = "src/main.rs"
 
 [dependencies]
-gix = { version = "0.70", default-features = false, features = ["blocking-http-transport-reqwest-rust-tls", "worktree-mutation"] }
 clap = { version = "4", features = ["derive"] }
 tempfile = "3"
