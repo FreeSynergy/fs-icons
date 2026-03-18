@@ -117,17 +117,17 @@ fn sync_we10x(icons_root: &Path) -> Result<(), Box<dyn std::error::Error>> {
           WE10X_URL,
           clone_path.to_str().unwrap()])?;
 
-    git_in(&clone_path, &["sparse-checkout", "set", "We10X/scalable/"])?;
+    git_in(&clone_path, &["sparse-checkout", "set", "src/"])?;
     git_in(&clone_path, &["checkout"])?;
 
-    // Copy all SVGs (recursively from subdirs) into target flat
+    // Copy all SVGs (recursively from subdirs) into target, preserving structure
     println!("  Clearing {}", target_dir.display());
     if target_dir.exists() {
         fs::remove_dir_all(&target_dir)?;
     }
     fs::create_dir_all(&target_dir)?;
 
-    let svg_src = clone_path.join("We10X").join("scalable");
+    let svg_src = clone_path.join("src");
     let count = copy_svgs_recursive(&svg_src, &target_dir)?;
 
     println!("  ✓ we10x: {count} SVGs copied");
