@@ -20,6 +20,7 @@ use std::{
 use clap::Parser;
 
 const HOMARRLABS_URL: &str = "https://github.com/homarr-labs/dashboard-icons.git";
+const WE10X_URL: &str = "https://github.com/yeyushengfan258/We10X-icon-theme.git";
 
 /// FreeSynergy Icons Sync — pulls latest icons from upstream sources.
 #[derive(Parser, Debug)]
@@ -43,7 +44,7 @@ fn main() {
 
     let sets_to_sync: Vec<&str> = match args.set.as_deref() {
         Some(s) => vec![s],
-        None => vec!["homarrlabs"],
+        None => vec!["homarrlabs", "we10x"],
     };
 
     for set_id in sets_to_sync {
@@ -60,6 +61,7 @@ fn main() {
 fn sync_set(set_id: &str, icons_root: &Path) -> Result<(), Box<dyn std::error::Error>> {
     match set_id {
         "homarrlabs" => sync_homarrlabs(icons_root),
+        "we10x" => sync_we10x(icons_root),
         other => Err(format!("Unknown set: {other}").into()),
     }
 }
@@ -102,6 +104,53 @@ fn sync_homarrlabs(icons_root: &Path) -> Result<(), Box<dyn std::error::Error>> 
 
     println!("  ✓ homarrlabs: {count} SVGs copied");
     Ok(())
+}
+
+fn sync_we10x(icons_root: &Path) -> Result<(), Box<dyn std::error::Error>> {
+    let tmp_dir = tempfile::tempdir()?;
+    let clone_path = tmp_dir.path().join("We10X-icon-theme");
+    let target_dir = icons_root.join("We10X");
+
+    // Sparse clone: only the scalable/ directory (SVGs), no history
+    println!("  Cloning (SVG only, depth=1)...");
+    git(&["clone", "--filter=blob:none", "--sparse", "--depth=1",
+          WE10X_URL,
+          clone_path.to_str().unwrap()])?;
+
+    git_in(&clone_path, &["sparse-checkout", "set", "We10X/scalable/"])?;
+    git_in(&clone_path, &["checkout"])?;
+
+    // Copy all SVGs (recursively from subdirs) into target flat
+    println!("  Clearing {}", target_dir.display());
+    if target_dir.exists() {
+        fs::remove_dir_all(&target_dir)?;
+    }
+    fs::create_dir_all(&target_dir)?;
+
+    let svg_src = clone_path.join("We10X").join("scalable");
+    let count = copy_svgs_recursive(&svg_src, &target_dir)?;
+
+    println!("  ✓ we10x: {count} SVGs copied");
+    Ok(())
+}
+
+/// Recursively walks `src_dir` and copies every *.svg into `dest_dir`,
+/// preserving the subdirectory structure relative to `src_dir`.
+fn copy_svgs_recursive(src_dir: &Path, dest_dir: &Path) -> Result<usize, Box<dyn std::error::Error>> {
+    let mut count = 0usize;
+    for entry in fs::read_dir(src_dir)? {
+        let entry = entry?;
+        let path = entry.path();
+        if path.is_dir() {
+            let sub = dest_dir.join(path.file_name().unwrap());
+            fs::create_dir_all(&sub)?;
+            count += copy_svgs_recursive(&path, &sub)?;
+        } else if path.extension().and_then(|e| e.to_str()) == Some("svg") {
+            fs::copy(&path, dest_dir.join(path.file_name().unwrap()))?;
+            count += 1;
+        }
+    }
+    Ok(count)
 }
 
 fn git(args: &[&str]) -> Result<(), Box<dyn std::error::Error>> {
