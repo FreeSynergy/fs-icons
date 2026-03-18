@@ -3,6 +3,9 @@
 // Pulls the latest SVG icons from upstream sources and copies them into
 // the local icon set directories.
 //
+// Uses git sparse-checkout with --depth=1 to fetch only SVG files.
+// No git history, no PNGs, no WebP variants — SVGs only.
+//
 // Usage:
 //   fsn-icons-sync                     → sync all sets
 //   fsn-icons-sync --set homarrlabs    → sync only homarrlabs
@@ -11,6 +14,7 @@
 use std::{
     fs,
     path::{Path, PathBuf},
+    process::Command,
 };
 
 use clap::Parser;
@@ -19,7 +23,7 @@ const HOMARRLABS_URL: &str = "https://github.com/homarr-labs/dashboard-icons.git
 
 /// FreeSynergy Icons Sync — pulls latest icons from upstream sources.
 #[derive(Parser, Debug)]
-#[command(name = "fsn-icons-sync", about = "Sync icon sets from upstream")]
+#[command(name = "fsn-icons-sync", about = "Sync icon sets from upstream (SVG only)")]
 struct Args {
     /// Sync only a specific set ID (e.g. "homarrlabs"). Syncs all if omitted.
     #[arg(long)]
@@ -65,9 +69,17 @@ fn sync_homarrlabs(icons_root: &Path) -> Result<(), Box<dyn std::error::Error>> 
     let clone_path = tmp_dir.path().join("dashboard-icons");
     let target_dir = icons_root.join("homarrlabs");
 
-    println!("  Cloning {HOMARRLABS_URL}...");
-    clone_repo(HOMARRLABS_URL, &clone_path)?;
+    // Sparse clone: only fetch tree objects first, no blobs, no history
+    println!("  Cloning (SVG only, depth=1)...");
+    git(&["clone", "--filter=blob:none", "--sparse", "--depth=1",
+          HOMARRLABS_URL,
+          clone_path.to_str().unwrap()])?;
 
+    // Restrict checkout to the svg/ directory only
+    git_in(&clone_path, &["sparse-checkout", "set", "svg/"])?;
+    git_in(&clone_path, &["checkout"])?;
+
+    // Copy SVGs to target
     println!("  Clearing {}", target_dir.display());
     if target_dir.exists() {
         fs::remove_dir_all(&target_dir)?;
@@ -92,23 +104,18 @@ fn sync_homarrlabs(icons_root: &Path) -> Result<(), Box<dyn std::error::Error>> 
     Ok(())
 }
 
-fn clone_repo(url: &str, target: &Path) -> Result<(), Box<dyn std::error::Error>> {
-    let mut prepare = gix::clone::PrepareFetch::new(
-        url,
-        target,
-        gix::create::Kind::WithWorktree,
-        gix::create::Options::default(),
-        gix::open::Options::isolated(),
-    )?;
-    prepare = prepare.with_remote_name("origin")?;
+fn git(args: &[&str]) -> Result<(), Box<dyn std::error::Error>> {
+    let status = Command::new("git").args(args).status()?;
+    if !status.success() {
+        return Err(format!("git {} failed (exit {})", args.join(" "), status).into());
+    }
+    Ok(())
+}
 
-    let (mut checkout, _outcome) = prepare.fetch_then_checkout(
-        gix::progress::Discard,
-        &gix::interrupt::IS_INTERRUPTED,
-    )?;
-
-    let (_repo, _outcome) =
-        checkout.main_worktree(gix::progress::Discard, &gix::interrupt::IS_INTERRUPTED)?;
-
+fn git_in(dir: &Path, args: &[&str]) -> Result<(), Box<dyn std::error::Error>> {
+    let status = Command::new("git").current_dir(dir).args(args).status()?;
+    if !status.success() {
+        return Err(format!("git {} failed (exit {})", args.join(" "), status).into());
+    }
     Ok(())
 }
