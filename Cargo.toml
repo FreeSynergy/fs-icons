@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "sync",
+    # "gallery",  # coming later
+]
+resolver = "2"

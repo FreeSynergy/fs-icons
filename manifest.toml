@@ -1,0 +1,19 @@
+# FreeSynergy Icons — Manifest
+#
+# Describes all available icon sets in this repository.
+# Each [[set]] entry is read by the IconManager and Gallery program.
+
+[repo]
+name    = "FreeSynergy Icons"
+version = "1.0.0"
+
+# ── Icon Sets ─────────────────────────────────────────────────────────────────
+
+[[set]]
+id               = "homarrlabs"
+name             = "Homarr Labs Dashboard Icons"
+description      = "A large collection of SVG icons for self-hosted services and apps"
+source           = "https://github.com/homarr-labs/dashboard-icons"
+license          = "MIT"
+has_dark_variants = true
+sync_binary      = "fsn-icons-sync --set homarrlabs"
