@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- white outline -->
+  <path d="M16 2 L11 8 L14 8 L14 14 L8 14 L8 11 L2 16 L8 21 L8 18 L14 18 L14 24 L11 24 L16 30 L21 24 L18 24 L18 18 L24 18 L24 21 L30 16 L24 11 L24 14 L18 14 L18 8 L21 8 Z"
+        fill="white" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+  <!-- black shape -->
+  <path d="M16 2 L11 8 L14 8 L14 14 L8 14 L8 11 L2 16 L8 21 L8 18 L14 18 L14 24 L11 24 L16 30 L21 24 L18 24 L18 18 L24 18 L24 21 L30 16 L24 11 L24 14 L18 14 L18 8 L21 8 Z"
+        fill="black"/>
+</svg>

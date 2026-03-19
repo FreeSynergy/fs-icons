@@ -1,0 +1,35 @@
+id          = "midnight"
+name        = "Midnight Cursors"
+description = "Default cursor set for the Midnight Blue theme — monochrome, clean, 32x32"
+author      = "FreeSynergy"
+version     = "1.0.0"
+builtin     = true
+
+# Hotspot coordinates [x, y] — pixel position of the active point within the 32x32 canvas
+# Default for all cursors: [0, 0] (top-left)
+[hotspots]
+pointer      = [9, 2]
+crosshair    = [16, 16]
+text         = [16, 16]
+text-vertical = [16, 16]
+move         = [16, 16]
+grab         = [16, 10]
+grabbing     = [16, 16]
+zoom-in      = [13, 13]
+zoom-out     = [13, 13]
+cell         = [16, 16]
+not-allowed  = [16, 16]
+busy         = [16, 16]
+progress     = [0, 0]
+resize-n     = [16, 0]
+resize-s     = [16, 32]
+resize-e     = [32, 16]
+resize-w     = [0, 16]
+resize-ns    = [16, 16]
+resize-ew    = [16, 16]
+resize-ne    = [32, 0]
+resize-nw    = [0, 0]
+resize-se    = [32, 32]
+resize-sw    = [0, 32]
+resize-nesw  = [16, 16]
+resize-nwse  = [16, 16]

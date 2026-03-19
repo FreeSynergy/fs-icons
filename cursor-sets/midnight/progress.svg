@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- arrow (same as default) -->
+  <path d="M3 2 L3 22 L8 17 L12 25 L15 23.5 L11 15.5 L18 15.5 Z"
+        fill="white" stroke="white" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M3 2 L3 22 L8 17 L12 25 L15 23.5 L11 15.5 L18 15.5 Z" fill="black"/>
+  <!-- activity dots bottom-right -->
+  <circle cx="22" cy="26" r="2.5" fill="white"/>
+  <circle cx="22" cy="26" r="2" fill="black"/>
+  <circle cx="27" cy="26" r="2.5" fill="white"/>
+  <circle cx="27" cy="26" r="2" fill="black" opacity="0.6"/>
+  <circle cx="32" cy="26" r="2.5" fill="white"/>
+  <circle cx="32" cy="26" r="2" fill="black" opacity="0.3"/>
+</svg>

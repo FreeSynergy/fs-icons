@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- white outline for visibility on dark backgrounds -->
+  <path d="M3 2 L3 22 L8 17 L12 25 L15 23.5 L11 15.5 L18 15.5 Z"
+        fill="white" stroke="white" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- black arrow -->
+  <path d="M3 2 L3 22 L8 17 L12 25 L15 23.5 L11 15.5 L18 15.5 Z"
+        fill="black"/>
+</svg>

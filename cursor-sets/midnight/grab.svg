@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- white shadow — open hand (5 fingers spread) -->
+  <g fill="white" stroke="white" stroke-width="2" stroke-linejoin="round">
+    <rect x="3"  y="9"  width="5" height="11" rx="2.5"/>
+    <rect x="9"  y="5"  width="5" height="15" rx="2.5"/>
+    <rect x="15" y="3"  width="5" height="17" rx="2.5"/>
+    <rect x="21" y="5"  width="5" height="15" rx="2.5"/>
+    <rect x="3"  y="18" width="23" height="10" rx="4"/>
+  </g>
+  <!-- black hand -->
+  <rect x="3"  y="9"  width="5" height="11" rx="2.5" fill="black"/>
+  <rect x="9"  y="5"  width="5" height="15" rx="2.5" fill="black"/>
+  <rect x="15" y="3"  width="5" height="17" rx="2.5" fill="black"/>
+  <rect x="21" y="5"  width="5" height="15" rx="2.5" fill="black"/>
+  <rect x="3"  y="18" width="23" height="10" rx="4" fill="black"/>
+</svg>

@@ -5,7 +5,7 @@
 
 [repo]
 name    = "FreeSynergy Icons"
-version = "1.0.0"
+version = "1.1.0"
 
 # ── Icon Sets ─────────────────────────────────────────────────────────────────
 
@@ -26,6 +26,17 @@ source           = "https://github.com/homarr-labs/dashboard-icons"
 license          = "MIT"
 has_dark_variants = true
 sync_binary      = "fsn-icons-sync --set homarrlabs"
+
+# ── Cursor Sets ───────────────────────────────────────────────────────────────
+
+[[cursor_set]]
+id          = "midnight"
+name        = "Midnight Cursors"
+description = "Default cursor set for the Midnight Blue theme — monochrome, clean, 32x32"
+path        = "cursor-sets/midnight"
+builtin     = true
+
+# ──────────────────────────────────────────────────────────────────────────────
 
 [[set]]
 id               = "we10x"

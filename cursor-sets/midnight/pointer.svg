@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- white shadow -->
+  <g fill="white" stroke="white" stroke-width="2" stroke-linejoin="round">
+    <rect x="9" y="2" width="6" height="15" rx="3"/>
+    <rect x="4" y="14" width="20" height="14" rx="5"/>
+  </g>
+  <!-- black hand -->
+  <rect x="9" y="2" width="6" height="15" rx="3" fill="black"/>
+  <rect x="4" y="14" width="20" height="14" rx="5" fill="black"/>
+  <!-- knuckle lines -->
+  <line x1="9" y1="15" x2="15" y2="15" stroke="white" stroke-width="1.2"/>
+</svg>

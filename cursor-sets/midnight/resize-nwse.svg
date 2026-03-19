@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- NW arrowhead -->
+  <path d="M2 2 L14 2 L2 14 Z"
+        fill="white" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M2 2 L14 2 L2 14 Z" fill="black"/>
+  <!-- SE arrowhead -->
+  <path d="M30 30 L18 30 L30 18 Z"
+        fill="white" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M30 30 L18 30 L30 18 Z" fill="black"/>
+  <!-- connecting diagonal line -->
+  <line x1="6" y1="6" x2="26" y2="26" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="6" y1="6" x2="26" y2="26" stroke="black" stroke-width="2" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- arrow -->
+  <path d="M3 2 L3 22 L8 17 L12 25 L15 23.5 L11 15.5 L18 15.5 Z"
+        fill="white" stroke="white" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M3 2 L3 22 L8 17 L12 25 L15 23.5 L11 15.5 L18 15.5 Z" fill="black"/>
+  <!-- shortcut arrow badge -->
+  <circle cx="24" cy="24" r="8" fill="white"/>
+  <circle cx="24" cy="24" r="7" fill="black"/>
+  <!-- small curved arrow indicating alias/shortcut -->
+  <path d="M21 26 A4 4 0 0 1 27 22 L25 20 M27 22 L27 26"
+        stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
