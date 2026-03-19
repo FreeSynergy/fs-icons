@@ -10,6 +10,15 @@ version = "1.0.0"
 # ── Icon Sets ─────────────────────────────────────────────────────────────────
 
 [[set]]
+id               = "freesynergy"
+name             = "FreeSynergy Icons"
+description      = "Official FreeSynergy brand icons: UI, notifications, system tray, and built-in app icons"
+source           = "https://github.com/FreeSynergy/Icons/tree/main/FreeSynergy"
+license          = "MIT"
+has_dark_variants = false
+builtin          = true
+
+[[set]]
 id               = "homarrlabs"
 name             = "Homarr Labs Dashboard Icons"
 description      = "A large collection of SVG icons for self-hosted services and apps"
