@@ -109,7 +109,7 @@ fn sync_homarrlabs(icons_root: &Path) -> Result<(), Box<dyn std::error::Error>> 
 fn sync_we10x(icons_root: &Path) -> Result<(), Box<dyn std::error::Error>> {
     let tmp_dir = tempfile::tempdir()?;
     let clone_path = tmp_dir.path().join("We10X-icon-theme");
-    let target_dir = icons_root.join("We10X");
+    let target_dir = icons_root.join("we10x");
 
     // Sparse clone: only the scalable/ directory (SVGs), no history
     println!("  Cloning (SVG only, depth=1)...");
