@@ -25,7 +25,7 @@ description      = "A large collection of SVG icons for self-hosted services and
 source           = "https://github.com/homarr-labs/dashboard-icons"
 license          = "MIT"
 has_dark_variants = true
-sync_binary      = "fsn-icons-sync --set homarrlabs"
+sync_binary      = "fs-icons-sync --set homarrlabs"
 
 # ── Cursor Sets ───────────────────────────────────────────────────────────────
 
@@ -45,4 +45,4 @@ description      = "Freedesktop-compliant icon theme with scalable SVGs for apps
 source           = "https://github.com/yeyushengfan258/We10X-icon-theme"
 license          = "GPL-3.0"
 has_dark_variants = false
-sync_binary      = "fsn-icons-sync --set we10x"
+sync_binary      = "fs-icons-sync --set we10x"

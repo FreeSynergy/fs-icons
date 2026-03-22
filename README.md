@@ -11,7 +11,7 @@ Each set lives in its own directory. The `manifest.toml` describes available set
 ```
 FreeSynergy.Icons/
   manifest.toml          # Registry of all available icon sets
-  sync/                  # Rust binary: fsn-icons-sync (pulls from upstream sources)
+  sync/                  # Rust binary: fs-icons-sync (pulls from upstream sources)
   gallery/               # Rust binary: icon browser and picker (coming soon)
   homarrlabs/            # Homarr Labs Dashboard Icons
     icon-name.svg
@@ -28,11 +28,11 @@ FreeSynergy.Icons/
 
 ## Updating an Icon Set
 
-Build and run `fsn-icons-sync` to pull the latest icons from upstream:
+Build and run `fs-icons-sync` to pull the latest icons from upstream:
 
 ```bash
-cargo run -p fsn-icons-sync               # sync all sets
-cargo run -p fsn-icons-sync -- --set homarrlabs   # sync only homarrlabs
+cargo run -p fs-icons-sync               # sync all sets
+cargo run -p fs-icons-sync -- --set homarrlabs   # sync only homarrlabs
 ```
 
 ## Adding New Sets

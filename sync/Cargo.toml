@@ -1,13 +1,14 @@
 [package]
-name = "fsn-icons-sync"
+name = "fs-icons-sync"
 version = "0.1.0"
 edition = "2021"
 description = "FreeSynergy Icons Sync — pulls latest icons from upstream sources"
 
 [[bin]]
-name = "fsn-icons-sync"
+name = "fs-icons-sync"
 path = "src/main.rs"
 
 [dependencies]
-clap = { version = "4", features = ["derive"] }
+clap     = { version = "4", features = ["derive"] }
 tempfile = "3"
+gix      = { version = "0.80", default-features = false, features = ["blocking-http-transport-reqwest-rust-tls", "worktree-mutation"] }
