@@ -24,7 +24,10 @@ const WE10X_URL: &str = "https://github.com/yeyushengfan258/We10X-icon-theme.git
 
 /// FreeSynergy Icons Sync — pulls latest icons from upstream sources.
 #[derive(Parser, Debug)]
-#[command(name = "fs-icons-sync", about = "Sync icon sets from upstream (SVG only)")]
+#[command(
+    name = "fs-icons-sync",
+    about = "Sync icon sets from upstream (SVG only)"
+)]
 struct Args {
     /// Sync only a specific set ID (e.g. "homarrlabs"). Syncs all if omitted.
     #[arg(long)]
@@ -125,7 +128,10 @@ fn sync_we10x(icons_root: &Path) -> Result<(), Box<dyn std::error::Error>> {
 
 /// Recursively walks `src_dir` and copies every *.svg into `dest_dir`,
 /// preserving the subdirectory structure relative to `src_dir`.
-fn copy_svgs_recursive(src_dir: &Path, dest_dir: &Path) -> Result<usize, Box<dyn std::error::Error>> {
+fn copy_svgs_recursive(
+    src_dir: &Path,
+    dest_dir: &Path,
+) -> Result<usize, Box<dyn std::error::Error>> {
     let mut count = 0usize;
     for entry in fs::read_dir(src_dir)? {
         let entry = entry?;
@@ -160,10 +166,8 @@ fn clone_shallow(url: &str, target: &Path) -> Result<(), Box<dyn std::error::Err
         NonZeroU32::new(1).unwrap(),
     ));
 
-    let (mut checkout, _outcome) = prepare.fetch_then_checkout(
-        gix::progress::Discard,
-        &gix::interrupt::IS_INTERRUPTED,
-    )?;
+    let (mut checkout, _outcome) =
+        prepare.fetch_then_checkout(gix::progress::Discard, &gix::interrupt::IS_INTERRUPTED)?;
 
     checkout.main_worktree(gix::progress::Discard, &gix::interrupt::IS_INTERRUPTED)?;
 
