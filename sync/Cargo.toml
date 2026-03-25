@@ -3,6 +3,7 @@ name = "fs-icons-sync"
 version = "0.1.0"
 edition = "2021"
 description = "FreeSynergy Icons Sync — pulls latest icons from upstream sources"
+license = "MIT"
 
 [[bin]]
 name = "fs-icons-sync"
