@@ -1,3 +1,4 @@
+#![deny(clippy::all, clippy::pedantic, warnings)]
 // fs-icons-sync
 //
 // Pulls the latest SVG icons from upstream sources and copies them into
@@ -22,7 +23,7 @@ use clap::Parser;
 const HOMARRLABS_URL: &str = "https://github.com/homarr-labs/dashboard-icons.git";
 const WE10X_URL: &str = "https://github.com/yeyushengfan258/We10X-icon-theme.git";
 
-/// FreeSynergy Icons Sync — pulls latest icons from upstream sources.
+/// `FreeSynergy` Icons Sync — pulls latest icons from upstream sources.
 #[derive(Parser, Debug)]
 #[command(
     name = "fs-icons-sync",
