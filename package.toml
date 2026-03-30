@@ -1,0 +1,15 @@
+[package]
+name        = "fs-icons"
+version     = "0.1.0"
+type        = "artifact"
+description = "Curated SVG icon sets for the FreeSynergy desktop (homarrlabs, we10x)"
+
+[capabilities]
+provides = ["icons.homarrlabs", "icons.we10x"]
+
+[binaries]
+fs-icons-sync = { path = "sync", description = "Syncs SVG icons from upstream sources (no system git required)" }
+
+[sources]
+upstream-homarrlabs = "https://github.com/homarr-labs/dashboard-icons"
+upstream-we10x      = "https://github.com/yeyushengfan258/We10X-icon-theme"

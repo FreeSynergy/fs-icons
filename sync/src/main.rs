@@ -174,3 +174,45 @@ fn clone_shallow(url: &str, target: &Path) -> Result<(), Box<dyn std::error::Err
 
     Ok(())
 }
+
+// ── Tests ─────────────────────────────────────────────────────────────────────
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::fs;
+
+    #[test]
+    fn sync_set_unknown_returns_error() {
+        let tmp = tempfile::tempdir().unwrap();
+        let result = sync_set("unknown-set", tmp.path());
+        assert!(result.is_err());
+        assert!(result.unwrap_err().to_string().contains("Unknown set"));
+    }
+
+    #[test]
+    fn copy_svgs_recursive_copies_only_svg_files() {
+        let src = tempfile::tempdir().unwrap();
+        let dst = tempfile::tempdir().unwrap();
+        fs::write(src.path().join("icon.svg"), "<svg/>").unwrap();
+        fs::write(src.path().join("image.png"), "PNG").unwrap();
+
+        let count = copy_svgs_recursive(src.path(), dst.path()).unwrap();
+        assert_eq!(count, 1);
+        assert!(dst.path().join("icon.svg").exists());
+        assert!(!dst.path().join("image.png").exists());
+    }
+
+    #[test]
+    fn copy_svgs_recursive_preserves_subdir_structure() {
+        let src = tempfile::tempdir().unwrap();
+        let dst = tempfile::tempdir().unwrap();
+        let sub = src.path().join("apps");
+        fs::create_dir_all(&sub).unwrap();
+        fs::write(sub.join("app.svg"), "<svg/>").unwrap();
+
+        let count = copy_svgs_recursive(src.path(), dst.path()).unwrap();
+        assert_eq!(count, 1);
+        assert!(dst.path().join("apps/app.svg").exists());
+    }
+}
