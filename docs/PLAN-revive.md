@@ -4,6 +4,8 @@ Status: inventory done, skeleton in place, Strategy decisions of 2026-11-12 appl
 
 ## 1. Inventory (origin/main 91a34d3, 93 MB without .git)
 
+Note: the We10X and Rust `sync/` parts named as open below are done, see Update 2026-11-12 (section 5). The inventory is kept as it was found.
+
 | Path | What | SVG files | Size | Licence evidence |
 |---|---|---|---|---|
 | `FreeSynergy/` | old "brand/UI" set, 62 icons, 24 grid, stroke `currentColor`, plus `languages/` (de, en) | 62 | 248 KB | only `manifest.toml` says MIT. No file, no author, no source. The style looks like a common stroke set; provenance unproven (rule: nothing copied). |
@@ -30,11 +32,11 @@ scripts/check_svg.py  SVG safety (no script, no on* attributes, no external href
 scripts/check_sets.py icons.toml vs files vs index.theme vs licence (free list); own names only with prefix freesynergy-
 scripts/gates.sh      the one measure (tests + check_sets + check_svg on sets/); .github/workflows/check.yml runs the same
 scripts/gen_excluded.py  writes EXCLUDED.md of a third-party set (flagged files, reason; files stay untouched)
-scripts/import_glyphs.py  bridge: exports the 43 glyphs of fs-components-styles (glyph.rs) into sets/freesynergy
+scripts/import_glyphs.py  bridge: exports the 43 glyphs of fs-components-styles (glyph.rs) into sets/freesynergy-theme
 packaging/            example package manifest (section 4)
 ```
-- `sets/freesynergy/`: 43 glyphs exported from `glyph.rs` at frontend-files `446d7ea`, names per Icon Naming Specification (`naming = spec`), widely used names that the Icon Naming Specification does NOT list marked `common` (checked against the spec text on 2026-11-12: `mark-location`, `view-list-details`, `view-grid`, `application-pdf`, `application-octet-stream` are not in it; `user-trash`, `drive-harddisk` are), our own with prefix `freesynergy-` (mail, phone, person, check, rename, share, sort, details, upload, download, filter, transfers). Each icon exists twice: `name.svg` (coloured variant, currently the same line drawing, `draft-colour`) and `name-symbolic.svg` (single colour, `currentColor`), see section 7. Stroke 1.75. These shapes change when the frontend agent rebases (stroke width, 3D nuance, standard names): re-run the importer, or after the hand-over edit the SVG files directly and drop the importer.
-- Legacy directories stay where they are until decided (below). They are not gated and not in `sets/`.
+- `sets/freesynergy-theme/`: 43 glyphs exported from `glyph.rs` at frontend-files `446d7ea`, names per Icon Naming Specification (`naming = spec`), widely used names that the Icon Naming Specification does NOT list marked `common` (checked against the spec text on 2026-11-12: `mark-location`, `view-list-details`, `view-grid`, `application-pdf`, `application-octet-stream` are not in it; `user-trash`, `drive-harddisk` are), our own with prefix `freesynergy-` (mail, phone, person, check, rename, share, sort, details, upload, download, filter, transfers). Each icon exists twice: `name.svg` (coloured variant, currently the same line drawing, `draft-colour`) and `name-symbolic.svg` (single colour, `currentColor`), see section 7. Stroke 1.75. These shapes change when the frontend agent rebases (stroke width, 3D nuance, standard names): re-run the importer, or after the hand-over edit the SVG files directly and drop the importer.
+- Legacy directories stay where they are until decided (We10X and `sync/` are gone, see Update 2026-11-12 in section 5). They are not gated and not in `sets/`.
 - Each further set: own directory under `sets/`, own `icons.toml` with licence and origin, free licence only (list in `check_sets.py`), licence text shipped.
 
 ## 3. icons.toml (schema)
@@ -44,7 +46,7 @@ packaging/            example package manifest (section 4)
 Generators to write next, in fs-documentation: a component page DE+EN per set (belongs to check-docs next to gen_component_indexes), reading only `icons.toml`.
 
 ## 4. Sets as packages (description only, no store code touched)
-Kind `icon-theme` next to `program` in the catalogue (`fs-catalog/packages.toml`). Example: `packaging/freesynergy.package.toml`: id `icon-theme-freesynergy`, kind, version 0.0.N, licence, `[content]` set/index/catalogue/install dir (`icons/FreeSynergy` under the XDG data dir), `[source]` repo, tag, asset `icon-theme-<id>-{version}.tar.gz` of `sets/<id>/`. Installation = unpack into the icon directory; no code runs. Sources follow ADR 0068; a signed own source for designers comes later (same signature as other assets). Each set is its own package with its own licence, so the user chooses what to install.
+Kind `icon-theme` next to `program` in the catalogue (`fs-catalog/packages.toml`). Example: `packaging/freesynergy-theme.package.toml`: id `icon-theme-freesynergy-theme`, kind, version 0.0.N, licence, `[content]` set/index/catalogue/install dir (`icons/FreeSynergy` under the XDG data dir), `[source]` repo, tag, asset `icon-theme-<id>-{version}.tar.gz` of `sets/<id>/`. Installation = unpack into the icon directory; no code runs. Sources follow ADR 0068; a signed own source for designers comes later (same signature as other assets). Each set is its own package with its own licence, so the user chooses what to install.
 Gap: `fs-release/.github/workflows/release.yml` builds binaries only (kinds cli/daemon/app); a data kind (tarball of `sets/<id>`, signed, draft release) does not exist. Needs a decision and a change in fs-release; not done here. `release.yml` is therefore NOT added to this repo yet.
 
 ## 5. Decisions and status
@@ -52,12 +54,12 @@ Gap: `fs-release/.github/workflows/release.yml` builds binaries only (kinds cli/
 Done (2026-11-12, local):
 - **We10X (GPL-3.0)**: `We10X/COPYING` (full text from upstream commit `0f52ff2d...`) and `We10X/NOTICE.md` (author, upstream URL, source of the text, version/commit situation, changes: none known) added; `manifest.toml` and `README.md` corrected (GPL-3.0, `default = false`). Files untouched.
 - **homarrlabs (Apache-2.0)**: `homarrlabs/LICENSE` (upstream text, commit `d767d732...`) and `homarrlabs/NOTICE` (copyright, upstream, trademark notice EN+DE: "Logos are trademarks of their owners, for identification only") added; manifest/README corrected to Apache-2.0, `default = false`. Optional, separate set, never in the default. Flagged files are NOT cleaned (that would alter third-party logos): they are excluded from the package and listed with reason in `homarrlabs/EXCLUDED.md` (65 files; scripts, foreignObject, external fonts/references, not XML, oversize; generated by `scripts/gen_excluded.py`, which can be re-run). The same list exists for `We10X/EXCLUDED.md` (76 files, mostly oversize) so a later package has it ready. Trademark and use rights of the logos themselves are not cleared by the licence: check the owners' brand rules before any store listing; recommendation: only as an optional separate set with licence and trademark notice, never as default.
-- Old `FreeSynergy/` (62, "by KalEl · Cyan + White", probably the owner's icons): unchanged. Origin and licence: **user is asked via Strategy**. Planned fate: it falls away once `sets/freesynergy` covers all names the programs use AND the origin cannot be proven. Nothing deleted.
+- Old `FreeSynergy/` (62, "by KalEl · Cyan + White", probably the owner's icons): unchanged. Origin and licence: user asked via Strategy; done, see Update 2026-11-12. Planned fate: it falls away once `sets/freesynergy-theme` covers all names the programs use AND the origin cannot be proven. Nothing deleted. (Superseded: see Update 2026-11-12.)
 
-Pending, needs a Yes from the owner (deleting) or other work:
+Pending, needs a Yes from the owner (deleting) or other work. (The We10X and Rust/`sync/` items in this list are done: see Update 2026-11-12 below; they stay here as written.)
 - **We10X leaves fs-icons**: becomes its own optional set package with its own licence (mirror per ADR 0068), never default. Removing it from this repo is a deletion; waits for the owner's Yes.
 - **Rust `sync/`, `Cargo.*`, `.clippy.toml`, `rustfmt.toml`, `deny.toml`, `Containerfile`, `package.toml`, `setup.sh`, `.githooks`, `CLAUDE.md`, `ci.yml`**: proposal unchanged, not removed. `sync` pulls upstream SVGs blindly (no licence, no safety check, overwrites our fixes) and is not needed for our own set; for third-party sets use a small reviewed import script per set that writes `icons.toml` with licence and origin, then `check_svg.py`. `package.toml` and `Containerfile` are stale (they name homarrlabs/we10x and the wrong path `we10x/`). Note `ci.yml` still runs cargo and a grep-based SVG check on the whole tree.
-- **cursor-sets/midnight**: origin unknown; not icon-theme material; keep out of packages until proven.
+- **cursor-sets/midnight** (still open): origin unknown; not icon-theme material; keep out of packages until proven.
 - **Release action for icon packages**: in fs-release after the current milestone (noted). Decision template in section 6.
 - `README.md`/`manifest.toml` are corrected for the licence facts only; full rewrite after the layout is final. Root `LICENSE` is still the single MIT file (migrated repos use LICENSE-APACHE and LICENSE-MIT).
 
@@ -66,6 +68,9 @@ Pending, needs a Yes from the owner (deleting) or other work:
 - We10X stays in git history (commit before this one). If a user wants it later it becomes its own optional package with its own licence (mirror per ADR 0068), never default.
 - **Later:** look for more free sets (checked licence, separate set each) or draw our own (SVG, also with AI help; each with `icons.toml`, licence and origin).
 - **Old `FreeSynergy/` (62):** belongs to the owner: origin "Owner (KalEl), logos", licence `MIT OR Apache-2.0` (repo convention), entered in `manifest.toml`, `README.md` and `FreeSynergy/icons.toml`, licence files copied. The text above that says "origin unproven / falls away" is superseded: it stays until the programs use the new theme names, then it is decided again.
+
+- **IDs (Strategy, 2026-11-12):** new theme = `freesynergy-theme` (directory `sets/freesynergy-theme/`, package `icon-theme-freesynergy-theme`), old logo set = `freesynergy-legacy`. The bare id `freesynergy` is no longer used, so nothing is mixed up. Aligned in `manifest.toml`, `README.md`, `package.toml`, both `icons.toml` files and `packaging/freesynergy-theme.package.toml`. The theme's display name in `index.theme` stays "FreeSynergy".
+- **Low priority:** an `[[icon]]` catalogue for the 62 legacy icons (names, meaning, purpose) comes later, not now.
 
 ## 6. Decision template: release action for icon packages (signed tarball per set)
 
@@ -77,7 +82,7 @@ Today: `fs-release/.github/workflows/release.yml` builds binaries (kinds cli, da
 | B. Small own workflow in fs-icons that calls only the signing and draft building blocks of fs-release (`actions/*`) | per-repo `release.yml` for tarballs | no change to the big pipeline; quick | duplicates the "one measure" idea; two places to keep in line |
 | C. No release, catalogue points at a git tag archive | tag only | nothing to build | unsigned archive; breaks the rule that every file is verified against the project key |
 
-Recommendation: A, after the fs-release milestone; B only if the first icon package is needed earlier. C rejected (signature). Open for the owner: the kind name (`icon-theme` as in the catalogue, or `data`); per-set tag (`icon-theme-freesynergy-v0.0.N`) versus one repo tag with several assets.
+Recommendation: A, after the fs-release milestone; B only if the first icon package is needed earlier. C rejected (signature). Open for the owner: the kind name (`icon-theme` as in the catalogue, or `data`); per-set tag (`icon-theme-freesynergy-theme-v0.0.N`) versus one repo tag with several assets.
 
 ## 7. Decision (Strategy, 2026-11-12): colours, symbolic variants
 

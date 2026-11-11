@@ -4,7 +4,7 @@
 # shows), purpose and purpose_de (what it is for, EN and DE), used_in (where it is reused), sizes ("scalable" or pixel sizes), variants (["symbolic"]: file name-symbolic.svg exists, single colour, currentColor),
 # status (draft-colour: the coloured file is still the line drawing; final).
 [set]
-id = "freesynergy"
+id = "freesynergy-theme"
 name = "FreeSynergy"
 kind = "icon-theme"
 version = "0.1.0"

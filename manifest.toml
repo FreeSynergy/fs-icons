@@ -10,7 +10,7 @@ version = "1.1.0"
 # ── Icon Sets ─────────────────────────────────────────────────────────────────
 
 [[set]]
-id               = "freesynergy"
+id               = "freesynergy-legacy"
 name             = "FreeSynergy Icons"
 description      = "Official FreeSynergy brand icons: UI, notifications, system tray, and built-in app icons"
 source           = "https://github.com/FreeSynergy/Icons/tree/main/FreeSynergy"
@@ -34,10 +34,10 @@ has_dark_variants = true
 id               = "freesynergy-theme"
 name             = "FreeSynergy"
 description      = "The FreeSynergy icon theme (freedesktop Icon Theme Specification): drawn by the project, coloured and -symbolic variants"
-path             = "sets/freesynergy"
+path             = "sets/freesynergy-theme"
 license          = "Apache-2.0 OR MIT"
-license_files    = ["sets/freesynergy/LICENSE-APACHE", "sets/freesynergy/LICENSE-MIT"]
-catalogue        = "sets/freesynergy/icons.toml"
+license_files    = ["sets/freesynergy-theme/LICENSE-APACHE", "sets/freesynergy-theme/LICENSE-MIT"]
+catalogue        = "sets/freesynergy-theme/icons.toml"
 builtin          = true
 
 # ── Cursor Sets ───────────────────────────────────────────────────────────────

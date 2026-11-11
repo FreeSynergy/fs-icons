@@ -5,7 +5,7 @@ type        = "artifact"
 description = "Curated SVG icon sets for the FreeSynergy desktop (FreeSynergy theme, logos, homarrlabs)"
 
 [capabilities]
-provides = ["icons.freesynergy", "icons.homarrlabs"]
+provides = ["icons.freesynergy-theme", "icons.freesynergy-legacy", "icons.homarrlabs"]
 
 [sources]
 upstream-homarrlabs = "https://github.com/homarr-labs/dashboard-icons"

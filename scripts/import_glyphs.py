@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Export the glyphs of fs-components-styles (glyph.rs) into the FreeSynergy theme.
 
-usage: import_glyphs.py <path to glyph.rs> [sets/freesynergy]
+usage: import_glyphs.py <path to glyph.rs> [sets/freesynergy-theme]
 
 Writes scalable/<context>/<name>.svg (coloured variant, still the line drawing: status draft-colour), the
 -symbolic variant (single colour, currentColor) and icons.toml. One-way bridge while the glyphs still live in
@@ -128,7 +128,7 @@ def parse(src: str):
 
 def main() -> int:
     glyph_rs = Path(sys.argv[1])
-    out = Path(sys.argv[2] if len(sys.argv) > 2 else "sets/freesynergy")
+    out = Path(sys.argv[2] if len(sys.argv) > 2 else "sets/freesynergy-theme")
     glyphs = parse(glyph_rs.read_text())
     toml = []
     for name, doc, path in glyphs:

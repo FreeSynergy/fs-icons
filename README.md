@@ -10,7 +10,7 @@ Each set lives in its own directory. The `manifest.toml` describes available set
 
 ```
 sets/<id>/            icon-theme sets (freedesktop Icon Theme Specification); icons.toml is the data source
-  freesynergy/        the FreeSynergy theme (drawn by the project)
+  freesynergy-theme/  the FreeSynergy theme (drawn by the project)
 FreeSynergy/          legacy logos of the owner (MIT OR Apache-2.0), not yet migrated
 homarrlabs/           Homarr Labs Dashboard Icons (optional, Apache-2.0, trademark notice)
 cursor-sets/          cursors (origin to be confirmed)
@@ -23,8 +23,8 @@ docs/PLAN-revive.md   plan, inventory, decisions
 
 | ID | Name | Source | License |
 |---|---|---|---|
-| `freesynergy-theme` | FreeSynergy theme (`sets/freesynergy/`) | drawn by the project | Apache-2.0 OR MIT |
-| `freesynergy` | FreeSynergy logos (legacy, `FreeSynergy/`) | owner (KalEl) | MIT OR Apache-2.0 |
+| `freesynergy-theme` | FreeSynergy theme (`sets/freesynergy-theme/`) | drawn by the project | Apache-2.0 OR MIT |
+| `freesynergy-legacy` | FreeSynergy logos (legacy, `FreeSynergy/`) | owner (KalEl) | MIT OR Apache-2.0 |
 | `homarrlabs` | Homarr Labs Dashboard Icons (optional; logos are trademarks of their owners, for identification only) | [homarr-labs/dashboard-icons](https://github.com/homarr-labs/dashboard-icons) | Apache-2.0 (`homarrlabs/LICENSE`, `homarrlabs/NOTICE`) |
 
 The We10X theme (GPL-3.0) was removed from this repository; it is no standard set. More free sets will be searched
