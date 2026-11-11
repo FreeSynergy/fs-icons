@@ -61,6 +61,12 @@ Pending, needs a Yes from the owner (deleting) or other work:
 - **Release action for icon packages**: in fs-release after the current milestone (noted). Decision template in section 6.
 - `README.md`/`manifest.toml` are corrected for the licence facts only; full rewrite after the layout is final. Root `LICENSE` is still the single MIT file (migrated repos use LICENSE-APACHE and LICENSE-MIT).
 
+### Update 2026-11-12 (owner's Yes via Strategy)
+- **Removed (git rm, local, branch revive-icons):** `We10X/` (GPL-3.0, no standard set any more), `sync/` (replaced by gates and `check_sets.py`), `Cargo.toml`, `Cargo.lock`, and the Rust-only files `.clippy.toml`, `rustfmt.toml`, `deny.toml`, `.githooks/`, `setup.sh` (they only served the Rust code). `ci.yml` lost its cargo, deny and audit jobs (the SVG scan job stays). `package.toml`, `Containerfile`, `manifest.toml`, `README.md`, `CLAUDE.md` were cleaned of We10X and sync. Nothing else was deleted.
+- We10X stays in git history (commit before this one). If a user wants it later it becomes its own optional package with its own licence (mirror per ADR 0068), never default.
+- **Later:** look for more free sets (checked licence, separate set each) or draw our own (SVG, also with AI help; each with `icons.toml`, licence and origin).
+- **Old `FreeSynergy/` (62):** belongs to the owner: origin "Owner (KalEl), logos", licence `MIT OR Apache-2.0` (repo convention), entered in `manifest.toml`, `README.md` and `FreeSynergy/icons.toml`, licence files copied. The text above that says "origin unproven / falls away" is superseded: it stays until the programs use the new theme names, then it is decided again.
+
 ## 6. Decision template: release action for icon packages (signed tarball per set)
 
 Today: `fs-release/.github/workflows/release.yml` builds binaries (kinds cli, daemon, app) into deb/rpm/AppImage/zip/msi and so on, signs and attests, and creates a draft release. A data package (no binary) has no kind.

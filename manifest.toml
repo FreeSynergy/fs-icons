@@ -14,7 +14,9 @@ id               = "freesynergy"
 name             = "FreeSynergy Icons"
 description      = "Official FreeSynergy brand icons: UI, notifications, system tray, and built-in app icons"
 source           = "https://github.com/FreeSynergy/Icons/tree/main/FreeSynergy"
-license          = "MIT"   # unchanged; origin/licence of these 62 files is still to be confirmed by the owner (docs/PLAN-revive.md)
+license          = "MIT OR Apache-2.0"   # repo convention
+origin           = "Owner (KalEl): logos drawn by the owner"
+license_files    = ["FreeSynergy/LICENSE-MIT", "FreeSynergy/LICENSE-APACHE"]
 has_dark_variants = false
 builtin          = true
 
@@ -27,7 +29,16 @@ license          = "Apache-2.0"
 license_files    = ["homarrlabs/LICENSE", "homarrlabs/NOTICE"]
 default          = false
 has_dark_variants = true
-sync_binary      = "fs-icons-sync --set homarrlabs"
+
+[[set]]
+id               = "freesynergy-theme"
+name             = "FreeSynergy"
+description      = "The FreeSynergy icon theme (freedesktop Icon Theme Specification): drawn by the project, coloured and -symbolic variants"
+path             = "sets/freesynergy"
+license          = "Apache-2.0 OR MIT"
+license_files    = ["sets/freesynergy/LICENSE-APACHE", "sets/freesynergy/LICENSE-MIT"]
+catalogue        = "sets/freesynergy/icons.toml"
+builtin          = true
 
 # ── Cursor Sets ───────────────────────────────────────────────────────────────
 
@@ -39,14 +50,3 @@ path        = "cursor-sets/midnight"
 builtin     = true
 
 # ──────────────────────────────────────────────────────────────────────────────
-
-[[set]]
-id               = "we10x"
-name             = "We10X Icon Theme"
-description      = "Freedesktop-compliant icon theme with scalable SVGs for apps, places, mimes, and more"
-source           = "https://github.com/yeyushengfan258/We10X-icon-theme"
-license          = "GPL-3.0"
-license_files    = ["We10X/COPYING", "We10X/NOTICE.md"]
-default          = false   # never part of the default theme; planned to move out (docs/PLAN-revive.md)
-has_dark_variants = false
-sync_binary      = "fs-icons-sync --set we10x"

@@ -1,0 +1,10 @@
+# Legacy set: the owner's logos and UI icons (62 SVG, 24 grid, stroke currentColor, plus languages/).
+# Origin and licence confirmed by the owner via Strategy on 2026-11-12. Not yet migrated to the icon-theme layout
+# (sets/<id>/ with index.theme and one [[icon]] entry per icon); the new theme is sets/freesynergy.
+[set]
+id = "freesynergy-legacy"
+name = "FreeSynergy logos (legacy)"
+kind = "icon-set"
+license = "MIT OR Apache-2.0"
+license_files = ["LICENSE-MIT", "LICENSE-APACHE"]
+origin = "Owner (KalEl), logos"

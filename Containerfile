@@ -5,7 +5,6 @@ FROM scratch
 # The icon directories are copied into the image for distribution.
 
 COPY homarrlabs/ /usr/share/freeSynergy/icons/homarrlabs/
-COPY we10x/     /usr/share/freeSynergy/icons/we10x/
 
 LABEL org.opencontainers.image.title="fs-icons"
 LABEL org.opencontainers.image.description="FreeSynergy curated SVG icon sets"
