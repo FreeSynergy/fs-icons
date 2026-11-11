@@ -22,6 +22,8 @@ file = "scalable/actions/a.svg"
 context = "actions"
 naming = "{naming}"
 meaning = "m"
+purpose = "p"
+purpose_de = "z"
 sizes = ["scalable"]
 """
 INDEX = "[Icon Theme]\nName=T\nDirectories=scalable/actions\n\n[scalable/actions]\nSize=24\nType=Scalable\n"
@@ -48,6 +50,18 @@ class CheckSets(unittest.TestCase):
     def test_own_prefix(self):
         self.assertTrue(any("freesynergy-" in e for e in check_sets.check_set(make(naming="own"))))
         self.assertTrue(any("freesynergy-" in e for e in check_sets.check_set(make(name="freesynergy-x"))))
+
+    def test_variant_file_needed(self):
+        d = make()
+        (d / "icons.toml").write_text((d / "icons.toml").read_text() + 'variants = ["symbolic"]\n')
+        self.assertTrue(any("variant file" in e for e in check_sets.check_set(d)))
+        (d / "scalable/actions/a-symbolic.svg").write_text("<svg/>")
+        self.assertEqual(check_sets.check_set(d), [])
+
+    def test_purpose_required(self):
+        d = make()
+        (d / "icons.toml").write_text((d / "icons.toml").read_text().replace('purpose_de = "z"\n', ""))
+        self.assertTrue(any("purpose_de missing" in e for e in check_sets.check_set(d)))
 
     def test_unlisted_svg(self):
         d = make()

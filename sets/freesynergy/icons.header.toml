@@ -1,7 +1,8 @@
 # One data source for this set (docs, catalogue and checks are generated from it).
 # [[icon]] fields: name (freedesktop Icon Naming; own names start with "freesynergy-"), file, context, naming
 # (spec = in the Icon Naming Specification, common = widely used but not in the spec, own), meaning (what it
-# shows), purpose (what it is for), used_in (where it is reused), sizes ("scalable" or pixel sizes).
+# shows), purpose and purpose_de (what it is for, EN and DE), used_in (where it is reused), sizes ("scalable" or pixel sizes), variants (["symbolic"]: file name-symbolic.svg exists, single colour, currentColor),
+# status (draft-colour: the coloured file is still the line drawing; final).
 [set]
 id = "freesynergy"
 name = "FreeSynergy"

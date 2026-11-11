@@ -10,7 +10,14 @@ from pathlib import Path
 FREE = {"MIT", "Apache-2.0", "Apache-2.0 OR MIT", "MIT OR Apache-2.0", "ISC", "BSD-2-Clause", "BSD-3-Clause",
         "CC0-1.0", "CC-BY-4.0", "CC-BY-SA-4.0", "GPL-3.0-or-later", "GPL-3.0-only", "LGPL-3.0-or-later"}
 NAMING = {"spec", "common", "own"}
-REQUIRED = ["name", "file", "context", "naming", "meaning", "sizes"]
+REQUIRED = ["name", "file", "context", "naming", "meaning", "purpose", "purpose_de", "sizes"]
+VARIANTS = {"symbolic"}
+STATUS = {"draft-colour", "final"}
+
+
+def variant_file(file: str, variant: str) -> str:
+    """scalable/actions/x.svg + symbolic -> scalable/actions/x-symbolic.svg"""
+    return file[: -len(".svg")] + f"-{variant}.svg"
 
 
 def check_set(d: Path) -> list[str]:
@@ -38,6 +45,13 @@ def check_set(d: Path) -> list[str]:
         seen.add(n)
         if not (d / i.get("file", "-")).is_file():
             errs.append(f"{n}: file {i.get('file')} not found")
+        for v in i.get("variants", []):
+            if v not in VARIANTS:
+                errs.append(f"{n}: unknown variant {v!r}")
+            elif not (d / variant_file(i.get("file", "x.svg"), v)).is_file():
+                errs.append(f"{n}: variant file for {v} not found")
+        if i.get("status", "final") not in STATUS:
+            errs.append(f"{n}: status must be one of {sorted(STATUS)}")
         if i.get("naming") not in NAMING:
             errs.append(f"{n}: naming must be one of {sorted(NAMING)}")
         if (i.get("naming") == "own") != n.startswith("freesynergy-"):
@@ -45,6 +59,7 @@ def check_set(d: Path) -> list[str]:
         if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", n):
             errs.append(f"{n}: name must be lowercase words joined by '-'")
     listed = {i.get("file") for i in data.get("icon", [])}
+    listed |= {variant_file(i["file"], v) for i in data.get("icon", []) for v in i.get("variants", []) if "file" in i}
     for f in sorted((d / "scalable").rglob("*.svg")) if (d / "scalable").is_dir() else []:
         if str(f.relative_to(d)) not in listed:
             errs.append(f"{f.relative_to(d)}: not listed in icons.toml")

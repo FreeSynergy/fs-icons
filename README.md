@@ -24,7 +24,9 @@ FreeSynergy.Icons/
 
 | ID | Name | Source | License |
 |---|---|---|---|
-| `homarrlabs` | Homarr Labs Dashboard Icons | [homarr-labs/dashboard-icons](https://github.com/homarr-labs/dashboard-icons) | MIT |
+| `homarrlabs` | Homarr Labs Dashboard Icons (optional; logos are trademarks of their owners, for identification only) | [homarr-labs/dashboard-icons](https://github.com/homarr-labs/dashboard-icons) | Apache-2.0 (`homarrlabs/LICENSE`, `homarrlabs/NOTICE`) |
+| `we10x` | We10X icon theme (optional, own licence, not part of the default theme) | [yeyushengfan258/We10X-icon-theme](https://github.com/yeyushengfan258/We10X-icon-theme) | GPL-3.0 (`We10X/COPYING`, `We10X/NOTICE.md`) |
+| `freesynergy` | FreeSynergy theme (new, in `sets/freesynergy/`) | drawn by the project | Apache-2.0 OR MIT |
 
 ## Updating an Icon Set
 
@@ -49,4 +51,4 @@ It reads `manifest.toml` and can be embedded anywhere an icon picker is needed.
 
 ## License
 
-See [LICENSE](LICENSE). Individual icon sets retain their original licenses as documented in `manifest.toml`.
+See [LICENSE](LICENSE). Individual icon sets retain their original licenses; each set directory carries its licence text and origin notice. The root `LICENSE` covers only files that carry no other notice. See `docs/PLAN-revive.md`.

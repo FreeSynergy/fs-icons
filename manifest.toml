@@ -14,16 +14,18 @@ id               = "freesynergy"
 name             = "FreeSynergy Icons"
 description      = "Official FreeSynergy brand icons: UI, notifications, system tray, and built-in app icons"
 source           = "https://github.com/FreeSynergy/Icons/tree/main/FreeSynergy"
-license          = "MIT"
+license          = "MIT"   # unchanged; origin/licence of these 62 files is still to be confirmed by the owner (docs/PLAN-revive.md)
 has_dark_variants = false
 builtin          = true
 
 [[set]]
 id               = "homarrlabs"
 name             = "Homarr Labs Dashboard Icons"
-description      = "A large collection of SVG icons for self-hosted services and apps"
+description      = "A large collection of app and service logos (optional, separate set; logos are trademarks of their owners, for identification only)"
 source           = "https://github.com/homarr-labs/dashboard-icons"
-license          = "MIT"
+license          = "Apache-2.0"
+license_files    = ["homarrlabs/LICENSE", "homarrlabs/NOTICE"]
+default          = false
 has_dark_variants = true
 sync_binary      = "fs-icons-sync --set homarrlabs"
 
@@ -44,5 +46,7 @@ name             = "We10X Icon Theme"
 description      = "Freedesktop-compliant icon theme with scalable SVGs for apps, places, mimes, and more"
 source           = "https://github.com/yeyushengfan258/We10X-icon-theme"
 license          = "GPL-3.0"
+license_files    = ["We10X/COPYING", "We10X/NOTICE.md"]
+default          = false   # never part of the default theme; planned to move out (docs/PLAN-revive.md)
 has_dark_variants = false
 sync_binary      = "fs-icons-sync --set we10x"

@@ -1,7 +1,8 @@
 # One data source for this set (docs, catalogue and checks are generated from it).
 # [[icon]] fields: name (freedesktop Icon Naming; own names start with "freesynergy-"), file, context, naming
 # (spec = in the Icon Naming Specification, common = widely used but not in the spec, own), meaning (what it
-# shows), purpose (what it is for), used_in (where it is reused), sizes ("scalable" or pixel sizes).
+# shows), purpose and purpose_de (what it is for, EN and DE), used_in (where it is reused), sizes ("scalable" or pixel sizes), variants (["symbolic"]: file name-symbolic.svg exists, single colour, currentColor),
+# status (draft-colour: the coloured file is still the line drawing; final).
 [set]
 id = "freesynergy"
 name = "FreeSynergy"
@@ -20,9 +21,12 @@ context = "actions"
 naming = "own"
 source_name = "mail"
 meaning = "An envelope: e-mail address."
-purpose = ""
+purpose = "Mail address of a person or a message button."
+purpose_de = "E-Mail-Adresse einer Person oder Schaltfläche für Nachrichten."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "freesynergy-phone"
@@ -31,9 +35,12 @@ context = "actions"
 naming = "own"
 source_name = "phone"
 meaning = "A handset: phone number."
-purpose = ""
+purpose = "Phone number of a person."
+purpose_de = "Telefonnummer einer Person."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "freesynergy-person"
@@ -42,20 +49,26 @@ context = "actions"
 naming = "own"
 source_name = "person"
 meaning = "A head and shoulders: person, name."
-purpose = ""
+purpose = "A person or a name field."
+purpose_de = "Eine Person oder ein Namensfeld."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "mark-location"
 file = "scalable/actions/mark-location.svg"
 context = "actions"
-naming = "spec"
+naming = "common"
 source_name = "place"
 meaning = "A map pin: place, postal address."
-purpose = ""
+purpose = "A place or postal address."
+purpose_de = "Ein Ort oder eine Postanschrift."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "x-office-calendar"
@@ -64,9 +77,12 @@ context = "mimetypes"
 naming = "spec"
 source_name = "calendar"
 meaning = "A calendar page: date."
-purpose = ""
+purpose = "A date, a calendar file or a date field."
+purpose_de = "Ein Datum, eine Kalenderdatei oder ein Datumsfeld."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "edit-find"
@@ -75,9 +91,12 @@ context = "actions"
 naming = "spec"
 source_name = "search"
 meaning = "A magnifier."
-purpose = ""
+purpose = "Start a search or mark the search field."
+purpose_de = "Suche starten oder Suchfeld kennzeichnen."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "list-add"
@@ -86,9 +105,12 @@ context = "actions"
 naming = "spec"
 source_name = "plus"
 meaning = "A plus."
-purpose = ""
+purpose = "Add or create something new."
+purpose_de = "Etwas hinzufügen oder neu anlegen."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "window-close"
@@ -97,9 +119,12 @@ context = "actions"
 naming = "spec"
 source_name = "close"
 meaning = "A cross."
-purpose = ""
+purpose = "Close a window, panel or dialog."
+purpose_de = "Fenster, Leiste oder Dialog schließen."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "freesynergy-check"
@@ -108,9 +133,12 @@ context = "status"
 naming = "own"
 source_name = "check"
 meaning = "A tick."
-purpose = ""
+purpose = "Done, confirmed or selected."
+purpose_de = "Erledigt, bestätigt oder ausgewählt."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "dialog-warning"
@@ -119,9 +147,12 @@ context = "status"
 naming = "spec"
 source_name = "warning"
 meaning = "A triangle with a mark."
-purpose = ""
+purpose = "Warn about something that needs attention."
+purpose_de = "Auf etwas hinweisen, das Beachtung braucht."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "edit-copy"
@@ -130,9 +161,12 @@ context = "actions"
 naming = "spec"
 source_name = "copy"
 meaning = "Two sheets."
-purpose = ""
+purpose = "Copy the selection."
+purpose_de = "Auswahl kopieren."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "folder"
@@ -141,9 +175,12 @@ context = "places"
 naming = "spec"
 source_name = "folder"
 meaning = "A folder."
-purpose = ""
+purpose = "A folder in lists, trees and places."
+purpose_de = "Ein Ordner in Listen, Bäumen und Orten."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "image-x-generic"
@@ -152,9 +189,12 @@ context = "mimetypes"
 naming = "spec"
 source_name = "file-image"
 meaning = "A picture file: a sheet with a hill and a sun."
-purpose = ""
+purpose = "File kind: picture."
+purpose_de = "Dateiart: Bild."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "text-x-generic"
@@ -163,9 +203,12 @@ context = "mimetypes"
 naming = "spec"
 source_name = "file-text"
 meaning = "A text file: a sheet with lines."
-purpose = ""
+purpose = "File kind: plain text."
+purpose_de = "Dateiart: einfacher Text."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "package-x-generic"
@@ -174,9 +217,12 @@ context = "mimetypes"
 naming = "spec"
 source_name = "file-archive"
 meaning = "An archive: a sheet with a zip."
-purpose = ""
+purpose = "File kind: archive or package."
+purpose_de = "Dateiart: Archiv oder Paket."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "audio-x-generic"
@@ -185,9 +231,12 @@ context = "mimetypes"
 naming = "spec"
 source_name = "file-audio"
 meaning = "An audio file: a sheet with a note."
-purpose = ""
+purpose = "File kind: sound or music."
+purpose_de = "Dateiart: Ton oder Musik."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "video-x-generic"
@@ -196,9 +245,12 @@ context = "mimetypes"
 naming = "spec"
 source_name = "file-video"
 meaning = "A video file: a sheet with a play mark."
-purpose = ""
+purpose = "File kind: video."
+purpose_de = "Dateiart: Video."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "application-pdf"
@@ -207,9 +259,12 @@ context = "mimetypes"
 naming = "common"
 source_name = "file-pdf"
 meaning = "A document for reading: a sheet with a fold mark."
-purpose = ""
+purpose = "File kind: PDF document."
+purpose_de = "Dateiart: PDF-Dokument."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "x-office-spreadsheet"
@@ -218,9 +273,12 @@ context = "mimetypes"
 naming = "spec"
 source_name = "file-sheet"
 meaning = "A spreadsheet: a sheet with a grid."
-purpose = ""
+purpose = "File kind: spreadsheet."
+purpose_de = "Dateiart: Tabellenkalkulation."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "x-office-document"
@@ -229,9 +287,12 @@ context = "mimetypes"
 naming = "spec"
 source_name = "file-doc"
 meaning = "A document: a sheet with a heading and lines."
-purpose = ""
+purpose = "File kind: word-processing document."
+purpose_de = "Dateiart: Textdokument."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "x-office-presentation"
@@ -240,9 +301,12 @@ context = "mimetypes"
 naming = "spec"
 source_name = "file-slides"
 meaning = "A presentation: a sheet with a screen."
-purpose = ""
+purpose = "File kind: presentation."
+purpose_de = "Dateiart: Präsentation."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "text-x-script"
@@ -251,9 +315,12 @@ context = "mimetypes"
 naming = "spec"
 source_name = "file-code"
 meaning = "A code file: a sheet with brackets."
-purpose = ""
+purpose = "File kind: source code or script."
+purpose_de = "Dateiart: Quelltext oder Skript."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "application-octet-stream"
@@ -262,9 +329,12 @@ context = "mimetypes"
 naming = "common"
 source_name = "file-unknown"
 meaning = "A file of a kind we do not know: a plain sheet."
-purpose = ""
+purpose = "File kind not known: plain sheet."
+purpose_de = "Dateiart unbekannt: leeres Blatt."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "edit-cut"
@@ -273,9 +343,12 @@ context = "actions"
 naming = "spec"
 source_name = "cut"
 meaning = "Scissors: cut."
-purpose = ""
+purpose = "Cut the selection."
+purpose_de = "Auswahl ausschneiden."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "edit-paste"
@@ -284,9 +357,12 @@ context = "actions"
 naming = "spec"
 source_name = "paste"
 meaning = "A clipboard: paste."
-purpose = ""
+purpose = "Paste from the clipboard."
+purpose_de = "Aus der Zwischenablage einfügen."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "freesynergy-rename"
@@ -295,9 +371,12 @@ context = "actions"
 naming = "own"
 source_name = "rename"
 meaning = "A pencil: rename."
-purpose = ""
+purpose = "Rename the selected item."
+purpose_de = "Ausgewähltes Element umbenennen."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "freesynergy-share"
@@ -306,9 +385,12 @@ context = "actions"
 naming = "own"
 source_name = "share"
 meaning = "Three dots joined: share."
-purpose = ""
+purpose = "Share the selected item with others."
+purpose_de = "Ausgewähltes Element mit anderen teilen."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "user-trash"
@@ -317,9 +399,12 @@ context = "places"
 naming = "spec"
 source_name = "trash"
 meaning = "A bin: trash."
-purpose = ""
+purpose = "Move to the bin or open the bin."
+purpose_de = "In den Papierkorb legen oder Papierkorb öffnen."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "freesynergy-sort"
@@ -328,9 +413,12 @@ context = "actions"
 naming = "own"
 source_name = "sort"
 meaning = "Two arrows, up and down: sort."
-purpose = ""
+purpose = "Change the sort order."
+purpose_de = "Sortierung ändern."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "view-list-details"
@@ -339,9 +427,12 @@ context = "actions"
 naming = "common"
 source_name = "view-list"
 meaning = "Lines: list view."
-purpose = ""
+purpose = "Show items as a list."
+purpose_de = "Elemente als Liste zeigen."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "view-grid"
@@ -350,9 +441,12 @@ context = "actions"
 naming = "common"
 source_name = "view-grid"
 meaning = "Four squares: grid view."
-purpose = ""
+purpose = "Show items as a grid of big icons."
+purpose_de = "Elemente als Raster großer Symbole zeigen."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "freesynergy-details"
@@ -361,9 +455,12 @@ context = "actions"
 naming = "own"
 source_name = "details"
 meaning = "A panel at the side: details."
-purpose = ""
+purpose = "Show or hide the details panel."
+purpose_de = "Detailleiste ein- oder ausblenden."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "go-previous"
@@ -372,9 +469,12 @@ context = "actions"
 naming = "spec"
 source_name = "back"
 meaning = "An arrow to the left: back."
-purpose = ""
+purpose = "Go back in the history."
+purpose_de = "Im Verlauf zurückgehen."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "go-next"
@@ -383,9 +483,12 @@ context = "actions"
 naming = "spec"
 source_name = "forward"
 meaning = "An arrow to the right: forward."
-purpose = ""
+purpose = "Go forward in the history."
+purpose_de = "Im Verlauf vorwärts gehen."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "go-up"
@@ -394,9 +497,12 @@ context = "actions"
 naming = "spec"
 source_name = "up"
 meaning = "An arrow up: up one folder."
-purpose = ""
+purpose = "Go to the parent folder."
+purpose_de = "Zum übergeordneten Ordner gehen."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "view-refresh"
@@ -405,9 +511,12 @@ context = "actions"
 naming = "spec"
 source_name = "reload"
 meaning = "A circle with an arrow: reload."
-purpose = ""
+purpose = "Reload the current view."
+purpose_de = "Aktuelle Ansicht neu laden."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "go-home"
@@ -416,9 +525,12 @@ context = "actions"
 naming = "spec"
 source_name = "home"
 meaning = "A house: home."
-purpose = ""
+purpose = "Go to the home folder or start page."
+purpose_de = "Zum Home-Ordner oder zur Startseite gehen."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "drive-harddisk"
@@ -427,9 +539,12 @@ context = "devices"
 naming = "spec"
 source_name = "drive"
 meaning = "A drive: a place to keep files."
-purpose = ""
+purpose = "A drive or storage place."
+purpose_de = "Ein Laufwerk oder Speicherort."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "freesynergy-upload"
@@ -438,9 +553,12 @@ context = "actions"
 naming = "own"
 source_name = "upload"
 meaning = "An arrow into a tray: upload."
-purpose = ""
+purpose = "Send a file to the server."
+purpose_de = "Eine Datei zum Server senden."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "freesynergy-download"
@@ -449,9 +567,12 @@ context = "actions"
 naming = "own"
 source_name = "download"
 meaning = "An arrow out of a tray: download."
-purpose = ""
+purpose = "Fetch a file from the server."
+purpose_de = "Eine Datei vom Server holen."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "freesynergy-filter"
@@ -460,9 +581,12 @@ context = "actions"
 naming = "own"
 source_name = "filter"
 meaning = "A funnel: filter."
-purpose = ""
+purpose = "Narrow a list by a condition."
+purpose_de = "Liste nach einer Bedingung einschränken."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "freesynergy-transfers"
@@ -471,9 +595,12 @@ context = "actions"
 naming = "own"
 source_name = "transfers"
 meaning = "Two arrows, one up and one down: what is being sent and received."
-purpose = ""
+purpose = "Show running uploads and downloads."
+purpose_de = "Laufende Übertragungen anzeigen."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"
 
 [[icon]]
 name = "dialog-information"
@@ -482,6 +609,9 @@ context = "status"
 naming = "spec"
 source_name = "info"
 meaning = "A circle with an i: information."
-purpose = ""
+purpose = "Show information about the item."
+purpose_de = "Informationen zum Element zeigen."
 used_in = ["fs-files"]
 sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-colour"

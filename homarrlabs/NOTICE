@@ -1,0 +1,16 @@
+Dashboard Icons (homarr-labs/dashboard-icons)
+Copyright (c) 2024 Bjorn Lammers, Meier Lukas, Thomas Camlong and Homarr Labs
+Licensed under the Apache License, Version 2.0 (full text in LICENSE next to this file).
+Upstream: https://github.com/homarr-labs/dashboard-icons
+Licence text from commit d767d7327db7f8ebd3715b552523f61889eea41c (2026-11-08).
+Files were copied by fs-icons-sync on 2026-03-18 (commit 1a3bde7 of this repository); no changes made by FreeSynergy
+(the sync did not record the upstream commit; not compared byte by byte).
+
+Trademark notice: Logos are trademarks of their owners, for identification only. The Apache-2.0 licence of this
+collection grants no rights in the marks or logos shown. Check the owner's brand rules before any other use.
+
+Marken-Hinweis: Logos sind Marken ihrer Inhaber, nur zur Kennzeichnung. Die Apache-2.0-Lizenz dieser Sammlung
+gewaehrt keine Rechte an den abgebildeten Marken oder Logos.
+
+Files with scripts, foreignObject, external references and similar findings are excluded from the package: EXCLUDED.md.
+This set is optional and separate; it is never part of the default FreeSynergy icon theme.
