@@ -1,0 +1,2 @@
+# fs-release switch file (check_rust_rules.py). This repo holds data, not Rust code that uses Blinc.
+blinc = "off"

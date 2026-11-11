@@ -1,0 +1,14 @@
+# One data source for this set (docs, catalogue and checks are generated from it).
+# [[icon]] fields: name (freedesktop Icon Naming; own names start with "freesynergy-"), file, context, naming
+# (spec = in the Icon Naming Specification, common = widely used but not in the spec, own), meaning (what it
+# shows), purpose (what it is for), used_in (where it is reused), sizes ("scalable" or pixel sizes).
+[set]
+id = "freesynergy"
+name = "FreeSynergy"
+kind = "icon-theme"
+version = "0.1.0"
+license = "Apache-2.0 OR MIT"
+license_files = ["LICENSE-APACHE", "LICENSE-MIT"]
+origin = "Drawn by the FreeSynergy project; no shape taken from another set (ADR 0066, item 6)."
+grid = "24x24"
+inherits = ["hicolor"]

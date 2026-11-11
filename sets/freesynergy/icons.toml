@@ -1,0 +1,487 @@
+# One data source for this set (docs, catalogue and checks are generated from it).
+# [[icon]] fields: name (freedesktop Icon Naming; own names start with "freesynergy-"), file, context, naming
+# (spec = in the Icon Naming Specification, common = widely used but not in the spec, own), meaning (what it
+# shows), purpose (what it is for), used_in (where it is reused), sizes ("scalable" or pixel sizes).
+[set]
+id = "freesynergy"
+name = "FreeSynergy"
+kind = "icon-theme"
+version = "0.1.0"
+license = "Apache-2.0 OR MIT"
+license_files = ["LICENSE-APACHE", "LICENSE-MIT"]
+origin = "Drawn by the FreeSynergy project; no shape taken from another set (ADR 0066, item 6)."
+grid = "24x24"
+inherits = ["hicolor"]
+
+[[icon]]
+name = "freesynergy-mail"
+file = "scalable/actions/freesynergy-mail.svg"
+context = "actions"
+naming = "own"
+source_name = "mail"
+meaning = "An envelope: e-mail address."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "freesynergy-phone"
+file = "scalable/actions/freesynergy-phone.svg"
+context = "actions"
+naming = "own"
+source_name = "phone"
+meaning = "A handset: phone number."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "freesynergy-person"
+file = "scalable/actions/freesynergy-person.svg"
+context = "actions"
+naming = "own"
+source_name = "person"
+meaning = "A head and shoulders: person, name."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "mark-location"
+file = "scalable/actions/mark-location.svg"
+context = "actions"
+naming = "spec"
+source_name = "place"
+meaning = "A map pin: place, postal address."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "x-office-calendar"
+file = "scalable/mimetypes/x-office-calendar.svg"
+context = "mimetypes"
+naming = "spec"
+source_name = "calendar"
+meaning = "A calendar page: date."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "edit-find"
+file = "scalable/actions/edit-find.svg"
+context = "actions"
+naming = "spec"
+source_name = "search"
+meaning = "A magnifier."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "list-add"
+file = "scalable/actions/list-add.svg"
+context = "actions"
+naming = "spec"
+source_name = "plus"
+meaning = "A plus."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "window-close"
+file = "scalable/actions/window-close.svg"
+context = "actions"
+naming = "spec"
+source_name = "close"
+meaning = "A cross."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "freesynergy-check"
+file = "scalable/status/freesynergy-check.svg"
+context = "status"
+naming = "own"
+source_name = "check"
+meaning = "A tick."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "dialog-warning"
+file = "scalable/status/dialog-warning.svg"
+context = "status"
+naming = "spec"
+source_name = "warning"
+meaning = "A triangle with a mark."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "edit-copy"
+file = "scalable/actions/edit-copy.svg"
+context = "actions"
+naming = "spec"
+source_name = "copy"
+meaning = "Two sheets."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "folder"
+file = "scalable/places/folder.svg"
+context = "places"
+naming = "spec"
+source_name = "folder"
+meaning = "A folder."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "image-x-generic"
+file = "scalable/mimetypes/image-x-generic.svg"
+context = "mimetypes"
+naming = "spec"
+source_name = "file-image"
+meaning = "A picture file: a sheet with a hill and a sun."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "text-x-generic"
+file = "scalable/mimetypes/text-x-generic.svg"
+context = "mimetypes"
+naming = "spec"
+source_name = "file-text"
+meaning = "A text file: a sheet with lines."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "package-x-generic"
+file = "scalable/mimetypes/package-x-generic.svg"
+context = "mimetypes"
+naming = "spec"
+source_name = "file-archive"
+meaning = "An archive: a sheet with a zip."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "audio-x-generic"
+file = "scalable/mimetypes/audio-x-generic.svg"
+context = "mimetypes"
+naming = "spec"
+source_name = "file-audio"
+meaning = "An audio file: a sheet with a note."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "video-x-generic"
+file = "scalable/mimetypes/video-x-generic.svg"
+context = "mimetypes"
+naming = "spec"
+source_name = "file-video"
+meaning = "A video file: a sheet with a play mark."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "application-pdf"
+file = "scalable/mimetypes/application-pdf.svg"
+context = "mimetypes"
+naming = "common"
+source_name = "file-pdf"
+meaning = "A document for reading: a sheet with a fold mark."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "x-office-spreadsheet"
+file = "scalable/mimetypes/x-office-spreadsheet.svg"
+context = "mimetypes"
+naming = "spec"
+source_name = "file-sheet"
+meaning = "A spreadsheet: a sheet with a grid."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "x-office-document"
+file = "scalable/mimetypes/x-office-document.svg"
+context = "mimetypes"
+naming = "spec"
+source_name = "file-doc"
+meaning = "A document: a sheet with a heading and lines."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "x-office-presentation"
+file = "scalable/mimetypes/x-office-presentation.svg"
+context = "mimetypes"
+naming = "spec"
+source_name = "file-slides"
+meaning = "A presentation: a sheet with a screen."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "text-x-script"
+file = "scalable/mimetypes/text-x-script.svg"
+context = "mimetypes"
+naming = "spec"
+source_name = "file-code"
+meaning = "A code file: a sheet with brackets."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "application-octet-stream"
+file = "scalable/mimetypes/application-octet-stream.svg"
+context = "mimetypes"
+naming = "common"
+source_name = "file-unknown"
+meaning = "A file of a kind we do not know: a plain sheet."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "edit-cut"
+file = "scalable/actions/edit-cut.svg"
+context = "actions"
+naming = "spec"
+source_name = "cut"
+meaning = "Scissors: cut."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "edit-paste"
+file = "scalable/actions/edit-paste.svg"
+context = "actions"
+naming = "spec"
+source_name = "paste"
+meaning = "A clipboard: paste."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "freesynergy-rename"
+file = "scalable/actions/freesynergy-rename.svg"
+context = "actions"
+naming = "own"
+source_name = "rename"
+meaning = "A pencil: rename."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "freesynergy-share"
+file = "scalable/actions/freesynergy-share.svg"
+context = "actions"
+naming = "own"
+source_name = "share"
+meaning = "Three dots joined: share."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "user-trash"
+file = "scalable/places/user-trash.svg"
+context = "places"
+naming = "spec"
+source_name = "trash"
+meaning = "A bin: trash."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "freesynergy-sort"
+file = "scalable/actions/freesynergy-sort.svg"
+context = "actions"
+naming = "own"
+source_name = "sort"
+meaning = "Two arrows, up and down: sort."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "view-list-details"
+file = "scalable/actions/view-list-details.svg"
+context = "actions"
+naming = "common"
+source_name = "view-list"
+meaning = "Lines: list view."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "view-grid"
+file = "scalable/actions/view-grid.svg"
+context = "actions"
+naming = "common"
+source_name = "view-grid"
+meaning = "Four squares: grid view."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "freesynergy-details"
+file = "scalable/actions/freesynergy-details.svg"
+context = "actions"
+naming = "own"
+source_name = "details"
+meaning = "A panel at the side: details."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "go-previous"
+file = "scalable/actions/go-previous.svg"
+context = "actions"
+naming = "spec"
+source_name = "back"
+meaning = "An arrow to the left: back."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "go-next"
+file = "scalable/actions/go-next.svg"
+context = "actions"
+naming = "spec"
+source_name = "forward"
+meaning = "An arrow to the right: forward."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "go-up"
+file = "scalable/actions/go-up.svg"
+context = "actions"
+naming = "spec"
+source_name = "up"
+meaning = "An arrow up: up one folder."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "view-refresh"
+file = "scalable/actions/view-refresh.svg"
+context = "actions"
+naming = "spec"
+source_name = "reload"
+meaning = "A circle with an arrow: reload."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "go-home"
+file = "scalable/actions/go-home.svg"
+context = "actions"
+naming = "spec"
+source_name = "home"
+meaning = "A house: home."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "drive-harddisk"
+file = "scalable/devices/drive-harddisk.svg"
+context = "devices"
+naming = "spec"
+source_name = "drive"
+meaning = "A drive: a place to keep files."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "freesynergy-upload"
+file = "scalable/actions/freesynergy-upload.svg"
+context = "actions"
+naming = "own"
+source_name = "upload"
+meaning = "An arrow into a tray: upload."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "freesynergy-download"
+file = "scalable/actions/freesynergy-download.svg"
+context = "actions"
+naming = "own"
+source_name = "download"
+meaning = "An arrow out of a tray: download."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "freesynergy-filter"
+file = "scalable/actions/freesynergy-filter.svg"
+context = "actions"
+naming = "own"
+source_name = "filter"
+meaning = "A funnel: filter."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "freesynergy-transfers"
+file = "scalable/actions/freesynergy-transfers.svg"
+context = "actions"
+naming = "own"
+source_name = "transfers"
+meaning = "Two arrows, one up and one down: what is being sent and received."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]
+
+[[icon]]
+name = "dialog-information"
+file = "scalable/status/dialog-information.svg"
+context = "status"
+naming = "spec"
+source_name = "info"
+meaning = "A circle with an i: information."
+purpose = ""
+used_in = ["fs-files"]
+sizes = ["scalable"]

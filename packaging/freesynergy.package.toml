@@ -1,0 +1,19 @@
+# Example of how the set "FreeSynergy" looks as a package of kind "icon-theme" in the catalogue / store.
+# Documentation only: no store code reads this yet (ADR 0068 sources; a signed own source for designers comes later).
+[package]
+id = "icon-theme-freesynergy"
+name = "FreeSynergy icon theme"
+kind = "icon-theme"                  # new kind next to "program"
+version = "0.0.1"                    # 0.0.N (ADR 0064)
+license = "Apache-2.0 OR MIT"        # per set, from sets/freesynergy/icons.toml
+
+[content]
+set = "freesynergy"                  # directory under sets/; holds index.theme, icons.toml, scalable/, licences
+index = "index.theme"                # freedesktop Icon Theme Specification
+catalogue = "icons.toml"             # names, meaning, licence, origin of every icon
+install-dir = "icons/FreeSynergy"    # relative to the user's icon directory (XDG data dir: icons/)
+
+[source]
+repo = "FreeSynergy/fs-icons"
+tag = "v0.0.1"
+asset = "icon-theme-freesynergy-{version}.tar.gz"   # sets/freesynergy/ as a tarball, signed like every release
