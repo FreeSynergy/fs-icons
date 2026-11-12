@@ -1,0 +1,28 @@
+<!-- FreeSynergy program icon: fs-wiki. Own drawing. SPDX-License-Identifier: MIT OR Apache-2.0 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="tile" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#818CF8"/>
+      <stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.32"/>
+      <stop offset="0.55" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="12" width="112" height="112" rx="28" fill="#312E81" opacity="0.35"/>
+  <rect x="8" y="8" width="112" height="112" rx="28" fill="url(#tile)"/>
+  <rect x="8" y="8" width="112" height="112" rx="28" fill="url(#gloss)"/>
+  <!-- page shadow -->
+  <path d="M36 26h40l24 24v52a8 8 0 0 1-8 8H36a8 8 0 0 1-8-8V34a8 8 0 0 1 8-8z" fill="#312E81" opacity="0.28"/>
+  <!-- page with folded corner -->
+  <path d="M36 22h40l24 24v52a8 8 0 0 1-8 8H36a8 8 0 0 1-8-8V30a8 8 0 0 1 8-8z" fill="#FFFFFF"/>
+  <path d="M76 22v16a8 8 0 0 0 8 8h16z" fill="#C7D2FE"/>
+  <!-- heading and text lines -->
+  <rect x="38" y="56" width="40" height="8" rx="4" fill="#4F46E5"/>
+  <rect x="38" y="72" width="52" height="5" rx="2.5" fill="#C7D2FE"/>
+  <rect x="38" y="83" width="46" height="5" rx="2.5" fill="#C7D2FE"/>
+  <rect x="38" y="94" width="30" height="5" rx="2.5" fill="#C7D2FE"/>
+  <!-- bookmark ribbon -->
+  <path d="M38 22h14v28l-7-6-7 6z" fill="#FBBF24"/>
+</svg>

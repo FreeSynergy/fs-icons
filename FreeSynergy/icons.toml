@@ -8,3 +8,97 @@ kind = "icon-set"
 license = "MIT OR Apache-2.0"
 license_files = ["LICENSE-MIT", "LICENSE-APACHE"]
 origin = "Owner (KalEl), logos"
+
+# apps/: filled programme icons (draft for review, own drawing, 128x128 viewBox, colour) with -symbolic companion (16x16, currentColor).
+# Not a catalogue entry yet; see docs/program-icons.md.
+
+[[icon]]
+name = "fs-store"
+file = "apps/fs-store.svg"
+context = "apps"
+naming = "own"
+meaning = "A parcel box with tape and an arrow dropping in: the package store."
+purpose = "Programme icon of fs-store."
+purpose_de = "Programm-Icon von fs-store."
+used_in = ["fs-store"]
+sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-review"
+
+[[icon]]
+name = "fs-tasks"
+file = "apps/fs-tasks.svg"
+context = "apps"
+naming = "own"
+meaning = "A clipboard with a checklist, two items done, one open."
+purpose = "Programme icon of fs-tasks."
+purpose_de = "Programm-Icon von fs-tasks."
+used_in = ["fs-tasks"]
+sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-review"
+
+[[icon]]
+name = "fs-people"
+file = "apps/fs-people.svg"
+context = "apps"
+naming = "own"
+meaning = "Two people, one in front, one behind: contacts."
+purpose = "Programme icon of fs-people."
+purpose_de = "Programm-Icon von fs-people."
+used_in = ["fs-people"]
+sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-review"
+
+[[icon]]
+name = "fs-calendar"
+file = "apps/fs-calendar.svg"
+context = "apps"
+naming = "own"
+meaning = "A wall calendar page with binder rings, a day grid and a marked day."
+purpose = "Programme icon of fs-calendar."
+purpose_de = "Programm-Icon von fs-calendar."
+used_in = ["fs-calendar"]
+sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-review"
+
+[[icon]]
+name = "fs-files"
+file = "apps/fs-files.svg"
+context = "apps"
+naming = "own"
+meaning = "An open folder with two sheets peeking out."
+purpose = "Programme icon of fs-files."
+purpose_de = "Programm-Icon von fs-files."
+used_in = ["fs-files"]
+sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-review"
+
+[[icon]]
+name = "fs-wiki"
+file = "apps/fs-wiki.svg"
+context = "apps"
+naming = "own"
+meaning = "A page with a folded corner, heading, text lines and a bookmark ribbon."
+purpose = "Programme icon of fs-wiki."
+purpose_de = "Programm-Icon von fs-wiki."
+used_in = ["fs-wiki"]
+sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-review"
+
+[[icon]]
+name = "fs-maps"
+file = "apps/fs-maps.svg"
+context = "apps"
+naming = "own"
+meaning = "A folded three-panel map with a location pin."
+purpose = "Programme icon of fs-maps."
+purpose_de = "Programm-Icon von fs-maps."
+used_in = ["fs-maps"]
+sizes = ["scalable"]
+variants = ["symbolic"]
+status = "draft-review"
