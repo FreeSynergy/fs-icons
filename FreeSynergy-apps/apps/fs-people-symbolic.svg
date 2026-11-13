@@ -1,7 +1,7 @@
 <!-- FreeSynergy program icon (symbolic): fs-people. Own drawing (mixed set). SPDX-License-Identifier: MIT -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+  <path d="M9.400 5.600a2.300 2.300 0 0 1 4.600 0V10h-4.600z"/>
+  <path d="M12 9.200h1.200A1.800 1.800 0 0 1 15 11v3h-2.600v-3c0-.7-.1-1.300-.4-1.800z"/>
   <circle cx="6" cy="5" r="2.750"/>
   <path d="M1 14v-3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3z"/>
-  <circle cx="11.600" cy="5.600" r="2.100"/>
-  <path d="M12 9.200h1.200A1.800 1.800 0 0 1 15 11v3h-2.600v-3c0-.7-.1-1.300-.4-1.800z"/>
 </svg>

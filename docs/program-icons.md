@@ -15,7 +15,7 @@ Family rules / Familienregeln: 128x128 viewBox, tile 112 px with radius 10 (abou
 - DE: Aufgaben. Grüne Kachel; Klemmbrett mit dunkler Klammer, zwei abgehakte, ein offenes Kästchen, Textzeilen. Symbolic: Klemmbrett mit Haken.
 
 ## fs-people
-- EN: Contacts. Pink tile; two persons with round heads, angular shoulders and no outline: white person in front with long dark berry-brown hair and a side fringe, pale-pink person behind with a light rose-brown bun. Flat hair shapes, no lines. Symbolic: two persons with round heads, no hair.
+- EN: Contacts. Pink tile; two persons with round heads, angular shoulders and no outline: white man in front with short dark berry-brown hair, pale-pink woman behind with long rose-brown hair. Flat hair shapes, no lines. Symbolic: two persons with round heads; the person behind has a long-hair silhouette.
 - DE: Kontakte. Pinke Kachel; zwei Personen mit runden Köpfen, eckigen Schultern und ohne Kontur: vorne eine weiße Person mit langen dunkel beerenbraunen Haaren und Seitenpony, dahinter eine blassrosa Person mit hellem rosabraunem Dutt. Flache Haarflächen, keine Linien. Symbolic: zwei Personen mit runden Köpfen, ohne Haare.
 
 ## fs-calendar
