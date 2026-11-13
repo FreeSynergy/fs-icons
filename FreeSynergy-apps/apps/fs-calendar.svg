@@ -1,0 +1,34 @@
+<!-- FreeSynergy program icon: fs-calendar. Own drawing (mixed set: serious form, playful colours). SPDX-License-Identifier: MIT -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="tile" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#F87171"/>
+      <stop offset="1" stop-color="#B91C1C"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0.7" y2="0.7">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.34"/>
+      <stop offset="0.6" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="112" height="112" rx="10" fill="url(#tile)"/>
+  <rect x="8" y="8" width="112" height="112" rx="10" fill="url(#gloss)"/>
+  <!-- page -->
+  <rect x="24" y="28" width="80" height="82" rx="3" fill="#FFFFFF"/>
+  <path d="M24 31a3 3 0 0 1 3-3h74a3 3 0 0 1 3 3v17H24z" fill="#991B1B"/>
+  <rect x="42" y="20" width="6" height="16" rx="2" fill="#FEE2E2"/>
+  <rect x="80" y="20" width="6" height="16" rx="2" fill="#FEE2E2"/>
+  <g fill="#E5E7EB">
+    <rect x="32" y="58" width="12" height="10" rx="1.500"/>
+    <rect x="50" y="58" width="12" height="10" rx="1.500"/>
+    <rect x="68" y="58" width="12" height="10" rx="1.500"/>
+    <rect x="86" y="58" width="12" height="10" rx="1.500"/>
+    <rect x="32" y="74" width="12" height="10" rx="1.500"/>
+    <rect x="68" y="74" width="12" height="10" rx="1.500"/>
+    <rect x="86" y="74" width="12" height="10" rx="1.500"/>
+    <rect x="32" y="90" width="12" height="10" rx="1.500"/>
+    <rect x="50" y="90" width="12" height="10" rx="1.500"/>
+    <rect x="68" y="90" width="12" height="10" rx="1.500"/>
+  </g>
+  <!-- marked day -->
+  <rect x="49" y="72" width="14" height="14" rx="2" fill="#EF4444"/>
+</svg>

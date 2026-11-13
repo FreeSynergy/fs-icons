@@ -1,0 +1,24 @@
+<!-- FreeSynergy program icon: fs-files. Own drawing (mixed set: serious form, playful colours). SPDX-License-Identifier: MIT -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="tile" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0.7" y2="0.7">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.34"/>
+      <stop offset="0.6" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="112" height="112" rx="10" fill="url(#tile)"/>
+  <rect x="8" y="8" width="112" height="112" rx="10" fill="url(#gloss)"/>
+  <!-- folder back with tab -->
+  <path d="M20 38a3 3 0 0 1 3-3h24l9 9h49a3 3 0 0 1 3 3v53a3 3 0 0 1-3 3H23a3 3 0 0 1-3-3z" fill="#1E40AF"/>
+  <!-- sheet -->
+  <rect x="32" y="48" width="64" height="40" rx="2" fill="#FFFFFF"/>
+  <rect x="42" y="57" width="30" height="4" rx="1" fill="#93C5FD"/>
+  <rect x="42" y="66" width="22" height="4" rx="1" fill="#BFDBFE"/>
+  <!-- front -->
+  <path d="M20 68a3 3 0 0 1 3-3h82a3 3 0 0 1 3 3v35a3 3 0 0 1-3 3H23a3 3 0 0 1-3-3z" fill="#DBEAFE"/>
+  <rect x="20" y="65" width="88" height="2" fill="#FFFFFF" opacity="0.6"/>
+</svg>

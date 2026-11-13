@@ -1,12 +1,12 @@
-# Serious programme icon set: second, calmer take on the seven programme icons (own drawing, 128x128 viewBox,
-# small corner radius, muted colours, no gloss/shadow) with -symbolic companions (16x16, currentColor).
-# Draft for review; not a catalogue entry yet. Compare with the playful set in ../FreeSynergy/apps. See docs/program-icons-serious.md.
+# Playful programme icon set: first take on the seven programme icons (own drawing, 128x128 viewBox, rounded tile radius 28,
+# colour gradients, soft gloss and hard shadow) with -symbolic companions (16x16, currentColor). Stays selectable next to the
+# mixed set `freesynergy` (FreeSynergy-apps/). Not a catalogue entry yet. See docs/program-icons-playful.md.
 [set]
-id = "freesynergy-serious"
-name = "FreeSynergy programme icons (serious)"
+id = "freesynergy-playful"
+name = "FreeSynergy Playful"
 kind = "icon-set"
-license = "MIT"
-license_files = ["LICENSE-MIT"]
+license = "MIT OR Apache-2.0"
+license_files = ["LICENSE-MIT", "LICENSE-APACHE"]
 origin = "Drawn by the FreeSynergy project; nothing traced from another set."
 
 [[icon]]
@@ -14,7 +14,7 @@ name = "fs-store"
 file = "apps/fs-store.svg"
 context = "apps"
 naming = "own"
-meaning = "A crate with lid and tape and an arrow dropping in: the package store."
+meaning = "A parcel box with tape and an arrow dropping in: the package store."
 purpose = "Programme icon of fs-store."
 purpose_de = "Programm-Icon von fs-store."
 used_in = ["fs-store"]
@@ -66,7 +66,7 @@ name = "fs-files"
 file = "apps/fs-files.svg"
 context = "apps"
 naming = "own"
-meaning = "A folder with a sheet peeking out."
+meaning = "An open folder with two sheets peeking out."
 purpose = "Programme icon of fs-files."
 purpose_de = "Programm-Icon von fs-files."
 used_in = ["fs-files"]

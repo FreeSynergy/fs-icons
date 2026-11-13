@@ -1,0 +1,23 @@
+<!-- FreeSynergy program icon: fs-people. Own drawing (mixed set: serious form, playful colours). SPDX-License-Identifier: MIT -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="tile" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#F472B6"/>
+      <stop offset="1" stop-color="#BE185D"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0.7" y2="0.7">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.34"/>
+      <stop offset="0.6" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="112" height="112" rx="10" fill="url(#tile)"/>
+  <rect x="8" y="8" width="112" height="112" rx="10" fill="url(#gloss)"/>
+  <!-- second person behind -->
+  <circle cx="82" cy="48" r="12" fill="#FBCFE8"/>
+  <path d="M58 106v-6c0-14 10-24 24-24s24 10 24 24v6z" fill="#FBCFE8"/>
+  <!-- first person in front, edge in tile colour -->
+  <circle cx="48" cy="52" r="15" fill="#FFFFFF" stroke="#DB2777" stroke-width="4"/>
+  <path d="M20 106v-6c0-17 13-28 28-28s28 11 28 28v6" fill="#FFFFFF" stroke="#DB2777" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="48" cy="52" r="13" fill="#FFFFFF"/>
+  <path d="M22 106v-6c0-16 12-26 26-26s26 10 26 26v6z" fill="#FFFFFF"/>
+</svg>

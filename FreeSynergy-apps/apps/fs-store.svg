@@ -1,0 +1,23 @@
+<!-- FreeSynergy program icon: fs-store. Own drawing (mixed set: serious form, playful colours). SPDX-License-Identifier: MIT -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="tile" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0.7" y2="0.7">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.34"/>
+      <stop offset="0.6" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="112" height="112" rx="10" fill="url(#tile)"/>
+  <rect x="8" y="8" width="112" height="112" rx="10" fill="url(#gloss)"/>
+  <!-- arrow into the crate -->
+  <path d="M64 20v22M53 33l11 11 11-11" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="miter"/>
+  <!-- lid and body -->
+  <rect x="24" y="56" width="80" height="14" rx="2" fill="#FFFFFF"/>
+  <rect x="30" y="70" width="68" height="36" rx="2" fill="#FEF3C7"/>
+  <!-- tape and handle slot -->
+  <rect x="57" y="56" width="14" height="50" fill="#B45309" opacity="0.85"/>
+  <rect x="38" y="80" width="13" height="5" rx="1" fill="#B45309" opacity="0.55"/>
+</svg>
