@@ -14,15 +14,15 @@
   <rect x="8" y="8" width="112" height="112" rx="28" fill="url(#tile)"/>
   <rect x="8" y="8" width="112" height="112" rx="28" fill="url(#gloss)"/>
   <!-- page shadow -->
-  <path d="M36 26h40l24 24v52a8 8 0 0 1-8 8H36a8 8 0 0 1-8-8V34a8 8 0 0 1 8-8z" fill="#312E81" opacity="0.28"/>
+  <path d="M32 24h46l26 26v56a8 8 0 0 1-8 8H32a8 8 0 0 1-8-8V32a8 8 0 0 1 8-8z" fill="#312E81" opacity="0.28"/>
   <!-- page with folded corner -->
-  <path d="M36 22h40l24 24v52a8 8 0 0 1-8 8H36a8 8 0 0 1-8-8V30a8 8 0 0 1 8-8z" fill="#FFFFFF"/>
-  <path d="M76 22v16a8 8 0 0 0 8 8h16z" fill="#C7D2FE"/>
+  <path d="M32 20h46l26 26v56a8 8 0 0 1-8 8H32a8 8 0 0 1-8-8V28a8 8 0 0 1 8-8z" fill="#FFFFFF"/>
+  <path d="M78 20v18a8 8 0 0 0 8 8h18z" fill="#C7D2FE"/>
   <!-- heading and text lines -->
-  <rect x="38" y="56" width="40" height="8" rx="4" fill="#4F46E5"/>
-  <rect x="38" y="72" width="52" height="5" rx="2.5" fill="#C7D2FE"/>
-  <rect x="38" y="83" width="46" height="5" rx="2.5" fill="#C7D2FE"/>
-  <rect x="38" y="94" width="30" height="5" rx="2.5" fill="#C7D2FE"/>
+  <rect x="36" y="62" width="44" height="8" rx="4" fill="#4F46E5"/>
+  <rect x="36" y="78" width="56" height="5" rx="2.5" fill="#C7D2FE"/>
+  <rect x="36" y="89" width="50" height="5" rx="2.5" fill="#C7D2FE"/>
+  <rect x="36" y="100" width="32" height="5" rx="2.5" fill="#C7D2FE"/>
   <!-- bookmark ribbon -->
-  <path d="M38 22h14v28l-7-6-7 6z" fill="#FBBF24"/>
+  <path d="M34 20h16v34l-8-7-8 7z" fill="#FBBF24"/>
 </svg>

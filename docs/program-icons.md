@@ -4,9 +4,11 @@ Status: draft for review, not in the catalogue. Files: `FreeSynergy/apps/<id>.sv
 
 Family rules / Familienregeln: 128x128 viewBox, rounded tile (112 px, radius 28), one colour family per programme (light top-left to dark bottom-right), soft gloss on the upper half, a hard offset shadow below tile and glyph (light from top-left), white and tinted-white glyph with content, no filters, no text. Symbolic: 16x16 grid, `currentColor`, for bars and small sizes only. Licence for all 14 files: `MIT OR Apache-2.0` (`LICENSE-MIT`, `LICENSE-APACHE` in `FreeSynergy/`), own drawing, origin FreeSynergy project; nothing traced from another set.
 
+Revision 2 / Überarbeitung 2: symbolic store is now a plain crate (lid, body, handle slot; no arrow); symbolic wiki carries the bookmark notch like the colour icon; symbolic files has a larger tab and a gap between tab part and front; calendar and tasks symbolics have larger cells/check strokes (min. 1.3 px on the 16 grid). Colour tasks and wiki glyphs enlarged (sheet 80x88 / page 80x90 in the 112 tile, about 55 to 60 % of the tile) so main glyph density matches calendar and maps; colours unchanged. Symbolic icons keep `currentColor`; previews substitute the theme foreground (light #2e3436, dark #eeeeec) at render time only.
+
 ## fs-store
-- EN: Package store. Amber/gold tile; a white parcel box (lid, cream body, golden tape, handle slot) with an arrow dropping in. Use colour at 48 px and larger; `-symbolic` (box and arrow) for bars below 32 px.
-- DE: Paketladen. Bernstein/Gold-Kachel; weiße Paketkiste (Deckel, cremefarbener Korpus, goldenes Band, Griffschlitz) mit einfallendem Pfeil. Farbe ab 48 px; `-symbolic` (Kiste mit Pfeil) für Leisten unter 32 px.
+- EN: Package store. Amber/gold tile; a white parcel box (lid, cream body, golden tape, handle slot) with an arrow dropping in. Use colour at 48 px and larger; `-symbolic` (plain crate, no arrow) for bars below 32 px.
+- DE: Paketladen. Bernstein/Gold-Kachel; weiße Paketkiste (Deckel, cremefarbener Korpus, goldenes Band, Griffschlitz) mit einfallendem Pfeil. Farbe ab 48 px; `-symbolic` (schlichte Kiste, ohne Pfeil) für Leisten unter 32 px.
 
 ## fs-tasks
 - EN: Tasks/board. Green tile; a white clipboard with dark clip and three rows: two done (green check), one open (ring). Colour from 48 px; symbolic clipboard with check below 32 px.
@@ -25,8 +27,8 @@ Family rules / Familienregeln: 128x128 viewBox, rounded tile (112 px, radius 28)
 - DE: Dateien/Ordner. Blaue Kachel; dunkelblaue Ordnerrückseite mit Reiter, zwei weiße Blätter ragen heraus, hellblaue Vorderseite mit heller Oberkante. Farbe ab 48 px; Symbolic (zweiteiliger Ordner) unter 32 px.
 
 ## fs-wiki
-- EN: Notes/pages. Indigo tile; a white page with folded corner, indigo heading bar, three lavender text lines and a yellow bookmark ribbon. Colour from 48 px; symbolic page outline with two lines below 32 px.
-- DE: Notizen/Seiten. Indigo-Kachel; weiße Seite mit umgeknickter Ecke, indigofarbener Überschrift, drei lavendelfarbenen Textzeilen und gelbem Lesezeichen. Farbe ab 48 px; Symbolic (Seitenumriss mit zwei Zeilen) unter 32 px.
+- EN: Notes/pages. Indigo tile; a white page with folded corner, indigo heading bar, three lavender text lines and a yellow bookmark ribbon. Colour from 48 px; symbolic page outline with bookmark and two lines below 32 px.
+- DE: Notizen/Seiten. Indigo-Kachel; weiße Seite mit umgeknickter Ecke, indigofarbener Überschrift, drei lavendelfarbenen Textzeilen und gelbem Lesezeichen. Farbe ab 48 px; Symbolic (Seitenumriss mit Lesezeichen und zwei Zeilen) unter 32 px.
 
 ## fs-maps
 - EN: Map/places. Cyan/teal tile; a folded three-panel map (pale cyan, white, light cyan) with a park, a water patch, a path, and a coral location pin with white centre. Colour from 48 px; symbolic pin below 32 px.

@@ -1,5 +1,5 @@
 <!-- FreeSynergy program icon (symbolic): fs-files. Own drawing. SPDX-License-Identifier: MIT OR Apache-2.0 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
-  <path d="M1.5 4A1.5 1.5 0 0 1 3 2.5h3l1.5 1.5H13A1.5 1.5 0 0 1 14.5 5.5v1H1.5z"/>
-  <path d="M1.5 7.8h13v4.7A1.5 1.5 0 0 1 13 14H3a1.5 1.5 0 0 1-1.5-1.5z"/>
+  <path d="M1.5 3.5A1.5 1.5 0 0 1 3 2h3.2a1.5 1.5 0 0 1 1.1.5L8.6 3.8H13A1.5 1.5 0 0 1 14.5 5.3V6H1.5z"/>
+  <path d="M1.5 7.2h13v5.3A1.5 1.5 0 0 1 13 14H3a1.5 1.5 0 0 1-1.5-1.5z"/>
 </svg>
