@@ -12,12 +12,14 @@
   </defs>
   <rect x="8" y="8" width="112" height="112" rx="10" fill="url(#tile)"/>
   <rect x="8" y="8" width="112" height="112" rx="10" fill="url(#gloss)"/>
-  <!-- second person behind -->
-  <rect x="70" y="36" width="24" height="24" rx="5" fill="#FBCFE8"/>
+  <!-- second person behind: bun hairstyle in light rose-brown -->
+  <circle cx="82" cy="34" r="5" fill="#B4536F"/>
   <path d="M58 106V86a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9v20z" fill="#FBCFE8"/>
-  <!-- first person in front, edge in tile colour -->
-  <rect x="33" y="37" width="30" height="30" rx="6" fill="#FFFFFF" stroke="#DB2777" stroke-width="4"/>
-  <path d="M20 106V84a11 11 0 0 1 11-11h34a11 11 0 0 1 11 11v22" fill="#FFFFFF" stroke="#DB2777" stroke-width="4" stroke-linejoin="round"/>
-  <rect x="33" y="37" width="30" height="30" rx="5" fill="#FFFFFF"/>
-  <path d="M22 106V84a9 9 0 0 1 9-9h34a9 9 0 0 1 9 9v22z" fill="#FFFFFF"/>
+  <circle cx="82" cy="48" r="12" fill="#FBCFE8"/>
+  <path d="M70 48a12 12 0 0 1 24 0c-4-1-9-3-11-6-3 3-8 5-13 6z" fill="#B4536F"/>
+  <!-- first person in front: long hair in dark berry-brown, side fringe -->
+  <path d="M30 52a18 18 0 0 1 36 0v26H30z" fill="#7A1F4B"/>
+  <path d="M20 106V84a11 11 0 0 1 11-11h34a11 11 0 0 1 11 11v22z" fill="#FFFFFF"/>
+  <circle cx="48" cy="52" r="15" fill="#FFFFFF"/>
+  <path d="M33 52a15 15 0 0 1 30 0c-9 0-17-3-21-8-2 4-5 7-9 8z" fill="#7A1F4B"/>
 </svg>
