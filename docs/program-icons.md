@@ -15,8 +15,8 @@ Family rules / Familienregeln: 128x128 viewBox, tile 112 px with radius 10 (abou
 - DE: Aufgaben. Grüne Kachel; Klemmbrett mit dunkler Klammer, zwei abgehakte, ein offenes Kästchen, Textzeilen. Symbolic: Klemmbrett mit Haken.
 
 ## fs-people
-- EN: Contacts. Pink tile; white person in front with a deep-pink edge, pale-pink person behind. Symbolic: two persons.
-- DE: Kontakte. Pinke Kachel; vorne eine weiße Person mit kräftig rosa Rand, dahinter eine blassrosa. Symbolic: zwei Personen.
+- EN: Contacts. Pink tile; angular persons (square heads, shoulders with small corner radii): white person in front with a deep-pink edge, pale-pink person behind. Symbolic: two angular persons.
+- DE: Kontakte. Pinke Kachel; eckige Personen (quadratische Köpfe, Schultern mit kleinen Eckenradien): vorne eine weiße Person mit kräftig rosa Rand, dahinter eine blassrosa. Symbolic: zwei eckige Personen.
 
 ## fs-calendar
 - EN: Calendar. Red tile; white page with dark-red header, two rings, grey day cells, one marked day. Symbolic: frame with cells.

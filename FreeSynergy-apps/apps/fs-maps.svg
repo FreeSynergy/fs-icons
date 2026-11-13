@@ -18,7 +18,6 @@
   <path d="M80 42l26-10v60l-26 10z" fill="#A5F3FC"/>
   <path d="M85 54l17-6v13l-17 6z" fill="#86EFAC"/>
   <path d="M26 80l17-6v9l-17 6z" fill="#67E8F9"/>
-  <path d="M54 98l22 6" fill="none" stroke="#67E8F9" stroke-width="3"/>
   <path d="M80 70l26-10M22 62l26-10" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.8"/>
   <!-- pin -->
   <path d="M64 92C51 78 47 70 47 60a17 17 0 0 1 34 0c0 10-4 18-17 32z" fill="#FB7185"/>
