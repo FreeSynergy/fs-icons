@@ -1,0 +1,23 @@
+<!-- FreeSynergy program icon: fs-maps. Own drawing (serious set). SPDX-License-Identifier: MIT -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3E8A95"/>
+      <stop offset="1" stop-color="#2C6B76"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="112" height="112" rx="10" fill="url(#tile)"/>
+  <rect x="8.5" y="8.5" width="111" height="111" rx="9.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.14"/>
+  <!-- folded map, three panels -->
+  <path d="M22 42l26-10v60l-26 10z" fill="#D3E4E6"/>
+  <path d="M48 32l32 10v60L48 92z" fill="#F1F6F6"/>
+  <path d="M80 42l26-10v60l-26 10z" fill="#BDD5D8"/>
+  <path d="M85 54l17-6v13l-17 6z" fill="#9FC3A5"/>
+  <path d="M26 80l17-6v9l-17 6z" fill="#7FB0B8"/>
+  <path d="M54 98l22 6" fill="none" stroke="#7FB0B8" stroke-width="3"/>
+  <path d="M80 70l26-10M22 62l26-10" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.8"/>
+  <!-- pin -->
+  <path d="M64 92C51 78 47 70 47 60a17 17 0 0 1 34 0c0 10-4 18-17 32z" fill="#C4655A"/>
+  <path d="M64 92C51 78 47 70 47 60a17 17 0 0 1 9-15C53 54 54 72 64 92z" fill="#8F3E36" opacity="0.4"/>
+  <circle cx="64" cy="59" r="6.500" fill="#F6ECEA"/>
+</svg>

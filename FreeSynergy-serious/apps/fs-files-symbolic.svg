@@ -1,0 +1,5 @@
+<!-- FreeSynergy program icon (symbolic): fs-files. Own drawing (serious set). SPDX-License-Identifier: MIT -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+  <path d="M1.500 2.900A.4.4 0 0 1 1.900 2.500h4.300a.9.9 0 0 1 .6.3L8.200 3.800h5.900a.4.4 0 0 1 .4.4V6h-13z"/>
+  <path d="M1.500 7.200h13v6.400a.4.4 0 0 1-.4.4H1.900a.4.4 0 0 1-.4-.4z"/>
+</svg>

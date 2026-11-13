@@ -1,0 +1,10 @@
+<!-- FreeSynergy program icon (symbolic): fs-calendar. Own drawing (serious set). SPDX-License-Identifier: MIT -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+  <path fill-rule="evenodd" d="M2.900 2.500h10.200a.4.4 0 0 1 .4.4v10.200a.4.4 0 0 1-.4.4H2.900a.4.4 0 0 1-.4-.4V2.900a.4.4 0 0 1 .4-.4zM3.400 7v6.200h9.200V7z"/>
+  <rect x="4.500" y="1" width="1.600" height="3.400"/>
+  <rect x="9.900" y="1" width="1.600" height="3.400"/>
+  <rect x="4.400" y="8.200" width="2" height="2"/>
+  <rect x="7" y="8.200" width="2" height="2"/>
+  <rect x="9.600" y="8.200" width="2" height="2"/>
+  <rect x="4.400" y="10.800" width="2" height="1.600"/>
+</svg>
